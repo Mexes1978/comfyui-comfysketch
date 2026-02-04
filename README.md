@@ -180,7 +180,12 @@ ComfyUI is a separate project. This tool is not affiliated with or endorsed by t
 
 MIT License.
 
+## ❤️ Support this project
+
+If you find this project useful, you can support its development here:  
+👉https://mexesmith.gumroad.com/l/kzwqlr
 ## Support
+
 
 This is a free and open-source ComfyUI node.  
 If it saves you time or fits into your workflow, you can optionally support the project via a tip on Gumroad.  
