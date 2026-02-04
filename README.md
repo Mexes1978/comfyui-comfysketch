@@ -2,7 +2,13 @@
 
 A drawing and sketching node for ComfyUI with layers, multiple brush types, and a focused, professional interface.
 
-**Status:** Active development. Feedback and issues are welcome.
+
+![ComfySketch screenshot](images/screen1.png)
+![ComfySketch screenshot](images/screen2.png)
+![ComfySketch screenshot](images/screen3.png)
+
+
+ **Status:** Active development. Feedback and issues are welcome.
 
 > Parts of this project were developed with the help of AI-assisted tools and then refined manually.
 
@@ -10,24 +16,24 @@ A drawing and sketching node for ComfyUI with layers, multiple brush types, and 
 
 ### Drawing Tools
 
-| Tool | Description |
-| --- | --- |
-| **Brush (B)** | Pressure-sensitive freehand drawing with hardness/falloff control |
-| **Pencil (P)** | 1px anti-aliased pencil for fine details |
-| **Line (L)** | Straight lines (hold Shift for horizontal/vertical/45°) |
-| **Circle (C)** | Ellipses (hold Shift for perfect circles) |
-| **Square (R)** | Rectangles (hold Shift for perfect squares) |
-| **Fill (G)** | Flood fill with adjustable tolerance |
-| **Eraser (E)** | Remove content from layers |
+| Tool           | Description                                                       |
+| -------------- | ----------------------------------------------------------------- |
+| **Brush (B)**  | Pressure-sensitive freehand drawing with hardness/falloff control |
+| **Pencil (P)** | 1px anti-aliased pencil for fine details                          |
+| **Line (L)**   | Straight lines (hold Shift for horizontal/vertical/45°)           |
+| **Circle (C)** | Ellipses (hold Shift for perfect circles)                         |
+| **Square (R)** | Rectangles (hold Shift for perfect squares)                       |
+| **Fill (G)**   | Flood fill with adjustable tolerance                              |
+| **Eraser (E)** | Remove content from layers                                        |
 
 ### Brush Types
 
-| Brush | Settings | Description |
-| --- | --- | --- |
-| **Round** | Hardness, Roundness, Angle | Standard brush with soft edge falloff |
-| **Soft** | Hardness, Roundness, Angle | Smooth gradient brush for blending |
-| **Airbrush** | Flow, Softness | Very soft brush for gradual color buildup |
-| **Spray** | Density | Particle spray pattern |
+| Brush        | Settings                   | Description                               |
+| ------------ | -------------------------- | ----------------------------------------- |
+| **Round**    | Hardness, Roundness, Angle | Standard brush with soft edge falloff     |
+| **Soft**     | Hardness, Roundness, Angle | Smooth gradient brush for blending        |
+| **Airbrush** | Flow, Softness             | Very soft brush for gradual color buildup |
+| **Spray**    | Density                    | Particle spray pattern                    |
 
 ### Color System
 
@@ -66,52 +72,52 @@ A drawing and sketching node for ComfyUI with layers, multiple brush types, and 
 
 ### Tools
 
-| Key | Tool |
-| --- | --- |
-| B   | Brush |
-| P   | Pencil |
-| E   | Eraser |
-| L   | Line |
-| C   | Circle |
-| R   | Rectangle |
-| G   | Fill |
+| Key | Tool       |
+| --- | ---------- |
+| B   | Brush      |
+| P   | Pencil     |
+| E   | Eraser     |
+| L   | Line       |
+| C   | Circle     |
+| R   | Rectangle  |
+| G   | Fill       |
 | I   | Eyedropper |
 
 ### Colors
 
-| Key | Action |
-| --- | --- |
+| Key | Action                            |
+| --- | --------------------------------- |
 | X   | Swap foreground/background colors |
 
 ### Adjustment (Hold + Drag)
 
-| Key | Action |
-| --- | --- |
+| Key      | Action            |
+| -------- | ----------------- |
 | S + Drag | Adjust brush size |
-| O + Drag | Adjust opacity |
+| O + Drag | Adjust opacity    |
 
 ### View
 
-| Key | Action |
-| --- | --- |
-| Space | Toggle UI visibility |
-| Space + Drag | Pan canvas |
-| +   | Zoom in |
-| -   | Zoom out |
-| Middle Mouse | Pan canvas |
-| Mouse Wheel | Zoom in/out |
+| Key          | Action               |
+| ------------ | -------------------- |
+| Space        | Toggle UI visibility |
+| Space + Drag | Pan canvas           |
+| +            | Zoom in              |
+| -            | Zoom out             |
+| Middle Mouse | Pan canvas           |
+| Mouse Wheel  | Zoom in/out          |
 
 ### Edit
 
-| Key | Action |
-| --- | --- |
-| Ctrl+Z | Undo |
-| Ctrl+Y | Redo |
+| Key    | Action |
+| ------ | ------ |
+| Ctrl+Z | Undo   |
+| Ctrl+Y | Redo   |
 
 ### Modifiers (while drawing shapes)
 
-| Key | Action |
-| --- | --- |
+| Key   | Action                                               |
+| ----- | ---------------------------------------------------- |
 | Shift | Perfect circle/square, constrain lines to 45° angles |
 
 ## Installation
@@ -141,8 +147,8 @@ A drawing and sketching node for ComfyUI with layers, multiple brush types, and 
 
 ## Node Outputs
 
-| Output | Description |
-| --- | --- |
+| Output  | Description                                      |
+| ------- | ------------------------------------------------ |
 | `image` | The composited drawing as a tensor (BHWC format) |
 
 ## Canvas Size Options
@@ -180,5 +186,5 @@ This is a free and open-source ComfyUI node.
 If it saves you time or fits into your workflow, you can optionally support the project via a tip on Gumroad.  
 The tool will remain fully usable without payment.
 
-![ComfySketch screenshot](file://C:\Users\mexes\Desktop\SKETCHFAB\comfyui-comfysketch\images\screen1.png?msec=1770208765735)
-![ComfySketch screenshot](file://C:\Users\mexes\Desktop\SKETCHFAB\comfyui-comfysketch\images\screen2.png?msec=1770208765744)
+
+
