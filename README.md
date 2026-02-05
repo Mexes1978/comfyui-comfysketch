@@ -9,6 +9,12 @@ A drawing and sketching node for ComfyUI with layers, multiple brush types, and 
 
 
  **Status:** Active development. Feedback and issues are welcome.
+ 
+ ## ❤️ Support this project
+
+If you find this project useful, you can support its development here:  
+👉https://mexesmith.gumroad.com/l/kzwqlr
+## Support
 
 > Parts of this project were developed with the help of AI-assisted tools and then refined manually.
 
@@ -180,11 +186,7 @@ ComfyUI is a separate project. This tool is not affiliated with or endorsed by t
 
 MIT License.
 
-## ❤️ Support this project
 
-If you find this project useful, you can support its development here:  
-👉https://mexesmith.gumroad.com/l/kzwqlr
-## Support
 
 
 This is a free and open-source ComfyUI node.  
