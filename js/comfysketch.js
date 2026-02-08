@@ -44,6 +44,7 @@ const PANEL_BORDER = '#ccc';
 const TEXT_DARK = '#222';
 const TEXT_LIGHT = '#666';
 
+
 // ==================== LUCIDE ICONS ====================
 const ICONS = {
     // File
@@ -74,6 +75,7 @@ const ICONS = {
     mirrorDrawBoth: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="2"/></svg>`,
     // Zoom
     fitToView: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>`,
+    move: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/></svg>`,
     zoomIn: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>`,
     zoomOut: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="8" x2="14" y1="11" y2="11"/></svg>`,
     // Actions
@@ -85,7 +87,12 @@ const ICONS = {
     moon: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`,
     // Layers
     addLayer: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>`,
+    // Selection tools
+    selectRect: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,2"><rect x="3" y="3" width="18" height="18" rx="0"/></svg>`,
+    selectEllipse: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,2"><ellipse cx="12" cy="12" rx="10" ry="8"/></svg>`,
+    selectLasso: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,2"><path d="M3 12c0-4 2-8 9-9s9 5 9 9-3 8-7 9"/><circle cx="12" cy="21" r="2" fill="currentColor" stroke-dasharray="none"/></svg>`,
     deleteLayer: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/></svg>`,
+    duplicateLayer: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M4 16V4a1 1 0 0 1 1-1h12"/></svg>`,
     mergeLayer: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h10"/></svg>`,
     visible: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`,
     hidden: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>`,
@@ -143,10 +150,12 @@ class DraggablePanel {
         this.content = document.createElement('div');
         this.container.appendChild(this.content);
         
-        // Drag events only (no resize)
+        // Drag events only (no resize) — store refs for cleanup
+        this._boundMouseMove = (e) => this.onMouseMove(e);
+        this._boundEndDrag = () => this.endDrag();
         this.header.addEventListener('mousedown', (e) => this.startDrag(e));
-        document.addEventListener('mousemove', (e) => this.onMouseMove(e));
-        document.addEventListener('mouseup', () => this.endDrag());
+        document.addEventListener('mousemove', this._boundMouseMove);
+        document.addEventListener('mouseup', this._boundEndDrag);
     }
     
     startDrag(e) {
@@ -235,6 +244,11 @@ class DraggablePanel {
     }
     
     getElement() { return this.container; }
+    
+    destroy() {
+        document.removeEventListener('mousemove', this._boundMouseMove);
+        document.removeEventListener('mouseup', this._boundEndDrag);
+    }
 }
 
 
@@ -866,8 +880,10 @@ class SizeOpacityWidget {
         
         this.dragHandle.addEventListener('mousedown', (e) => this.startDrag(e));
         this.canvas.addEventListener('mousedown', (e) => this.onMouseDown(e));
-        document.addEventListener('mousemove', (e) => this.onMouseMove(e));
-        document.addEventListener('mouseup', () => this.onMouseUp());
+        this._boundWidgetMouseMove = (e) => this.onMouseMove(e);
+        this._boundWidgetMouseUp = () => this.onMouseUp();
+        document.addEventListener('mousemove', this._boundWidgetMouseMove);
+        document.addEventListener('mouseup', this._boundWidgetMouseUp);
         
         this.draw();
     }
@@ -1015,6 +1031,15 @@ class SizeOpacityWidget {
     }
     
     getElement() { return this.container; }
+    
+    destroy() {
+        document.removeEventListener('mousemove', this._boundWidgetMouseMove);
+        document.removeEventListener('mouseup', this._boundWidgetMouseUp);
+        if (this.labelEl && this.labelEl.parentNode) {
+            this.labelEl.parentNode.removeChild(this.labelEl);
+            this.labelEl = null;
+        }
+    }
 }
 
 
@@ -1040,6 +1065,10 @@ class LayersPanel extends DraggablePanel {
         const delBtn = this.createBtn(ICONS.deleteLayer, 'Delete layer');
         delBtn.onclick = () => { this.pad.deleteLayer(); this.update(); };
         btns.appendChild(delBtn);
+        
+        const dupBtn = this.createBtn(ICONS.duplicateLayer, 'Duplicate layer');
+        dupBtn.onclick = () => { this.pad.duplicateLayer(); this.update(); };
+        btns.appendChild(dupBtn);
         
         const mergeBtn = this.createBtn(ICONS.mergeLayer, 'Merge down');
         mergeBtn.onclick = () => { this.pad.mergeDown(); this.update(); };
@@ -1144,7 +1173,7 @@ class LayersPanel extends DraggablePanel {
                 background: ${i === this.pad.activeLayerIndex ? '#d6dadb' : 'transparent'};
                 cursor: grab;
             `;
-            item.onclick = () => { this.pad.activeLayerIndex = layerIndex; this.update(); };
+            item.onclick = () => { if (this.pad.transform) this.pad.commitTransform(); this.pad.activeLayerIndex = layerIndex; this.update(); };
             
             item.ondragstart = (e) => {
                 e.dataTransfer.setData('text/plain', i.toString());
@@ -1227,8 +1256,33 @@ class ToolbarPanel extends DraggablePanel {
     }
     
     createContent() {
+        this.addSection('Select');
+        const selectGrid = document.createElement('div');
+        selectGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 22px); gap: 3px; margin-bottom: 6px;';
+        
+        // Single select button — shows icon of current select sub-tool, default lasso
+        this.pad.selectSubTool = this.pad.selectSubTool || 'select-lasso';
+        const selectIcons = { 'select-lasso': ICONS.selectLasso, 'select-rect': ICONS.selectRect, 'select-ellipse': ICONS.selectEllipse };
+        const selectLabels = { 'select-lasso': 'Lasso', 'select-rect': 'Rect', 'select-ellipse': 'Ellipse' };
+        const isSelectActive = this.pad.tool.startsWith('select-');
+        this.selectBtn = this.createBtn(selectIcons[this.pad.selectSubTool], `${selectLabels[this.pad.selectSubTool]} Select (double-click for options)`, isSelectActive);
+        this.selectBtn.dataset.tool = 'select';
+        this.selectBtn.onclick = () => {
+            if (this.pad.transform) this.pad.commitTransform();
+            this.pad.tool = this.pad.selectSubTool;
+            this.updateToolButtons();
+            this.pad.updateCursor();
+        };
+        this.selectBtn.ondblclick = (e) => {
+            e.stopPropagation();
+            this.showSelectSubMenu(this.selectBtn);
+        };
+        selectGrid.appendChild(this.selectBtn);
+        this.content.appendChild(selectGrid);
+        
         this.addSection('Draw');
         const tools = [
+            { id: 'move', icon: ICONS.move, label: 'Move (V)' },
             { id: 'draw', icon: ICONS.brush, label: 'Brush (B)' },
             { id: 'pencil', icon: ICONS.pencil, label: 'Pencil (P)' },
             { id: 'line', icon: ICONS.line, label: 'Line (L)' },
@@ -1242,7 +1296,7 @@ class ToolbarPanel extends DraggablePanel {
         tools.forEach(t => {
             const btn = this.createBtn(t.icon, t.label + ' (double-click for options)', t.id === this.pad.tool);
             btn.dataset.tool = t.id;
-            btn.onclick = () => { this.pad.tool = t.id; this.updateToolButtons(); this.pad.updateCursor(); };
+            btn.onclick = () => { if (this.pad.transform) this.pad.commitTransform(); this.pad.tool = t.id; this.updateToolButtons(); this.pad.updateCursor(); };
             btn.ondblclick = (e) => { e.stopPropagation(); this.showToolProperties(t.id, btn); };
             toolsGrid.appendChild(btn);
         });
@@ -1461,6 +1515,72 @@ class ToolbarPanel extends DraggablePanel {
         panel.appendChild(row);
     }
     
+    showSelectSubMenu(anchorBtn) {
+        this.closePropertiesPanel();
+        
+        const isDark = this.isDark;
+        const panel = document.createElement('div');
+        panel.className = 'tool-properties-panel';
+        panel.style.cssText = `
+            position: absolute; left: 100%; top: 0; margin-left: 8px;
+            background: ${isDark ? '#3a3a3a' : '#fff'}; 
+            border: 1px solid ${isDark ? '#555' : '#ccc'}; border-radius: 6px;
+            padding: 6px; width: 90px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 100001; overflow: hidden;
+        `;
+        
+        const title = document.createElement('div');
+        title.textContent = 'Select Tool';
+        title.style.cssText = `font-size: 10px; font-weight: bold; margin-bottom: 5px; color: ${isDark ? '#eee' : '#333'};`;
+        panel.appendChild(title);
+        
+        const selectTools = [
+            { id: 'select-lasso', icon: ICONS.selectLasso, label: 'Lasso (F)' },
+            { id: 'select-rect', icon: ICONS.selectRect, label: 'Rect (M)' },
+            { id: 'select-ellipse', icon: ICONS.selectEllipse, label: 'Ellipse' },
+        ];
+        
+        const grid = document.createElement('div');
+        grid.style.cssText = 'display: flex; flex-direction: column; gap: 3px;';
+        selectTools.forEach(t => {
+            const row = document.createElement('button');
+            const isActive = this.pad.selectSubTool === t.id;
+            row.innerHTML = `<span style="display:inline-flex;align-items:center;margin-right:4px;">${t.icon}</span><span style="font-size:10px;">${t.label}</span>`;
+            row.style.cssText = `
+                display: flex; align-items: center; padding: 3px 5px; border-radius: 3px;
+                border: 1px solid ${isActive ? '#606a6e' : (isDark ? '#555' : '#ccc')};
+                background: ${isActive ? '#d6dadb' : (isDark ? '#4a4a4a' : '#e8e8e8')};
+                color: ${isDark ? '#eee' : '#333'}; cursor: pointer; width: 100%;
+                box-sizing: border-box;
+            `;
+            row.onclick = (ev) => {
+                ev.stopPropagation();
+                this.pad.selectSubTool = t.id;
+                this.pad.tool = t.id;
+                // Update the main select button icon
+                this.selectBtn.innerHTML = t.icon;
+                this.selectBtn.title = `${t.label} Select (double-click for options)`;
+                this.updateToolButtons();
+                this.pad.updateCursor();
+                this.closePropertiesPanel();
+            };
+            grid.appendChild(row);
+        });
+        panel.appendChild(grid);
+        
+        this.propertiesPanel = panel;
+        this.container.appendChild(panel);
+        
+        setTimeout(() => {
+            this.outsideClickHandler = (e) => {
+                if (!panel.contains(e.target) && !anchorBtn.contains(e.target)) {
+                    this.closePropertiesPanel();
+                }
+            };
+            document.addEventListener('click', this.outsideClickHandler);
+        }, 10);
+    }
+    
     closePropertiesPanel() {
         if (this.propertiesPanel) {
             this.propertiesPanel.remove();
@@ -1497,11 +1617,26 @@ class ToolbarPanel extends DraggablePanel {
     updateToolButtons() {
         const isDark = this.isDark;
         this.content.querySelectorAll('button[data-tool]').forEach(btn => {
-            const isActive = btn.dataset.tool === this.pad.tool;
+            let isActive;
+            if (btn.dataset.tool === 'select') {
+                // Highlight select button when any select sub-tool is active
+                isActive = this.pad.tool.startsWith('select-');
+            } else {
+                isActive = btn.dataset.tool === this.pad.tool;
+            }
             btn.style.background = isActive ? '#d6dadb' : (isDark ? '#3a3a3a' : '#e8e8e8');
             btn.style.borderColor = isActive ? '#606a6e' : (isDark ? '#555' : '#ccc');
             btn.style.color = isActive ? '#333' : (isDark ? '#eee' : '#444');
         });
+    }
+    
+    updateSelectBtnIcon() {
+        if (!this.selectBtn) return;
+        const icons = { 'select-lasso': ICONS.selectLasso, 'select-rect': ICONS.selectRect, 'select-ellipse': ICONS.selectEllipse };
+        const labels = { 'select-lasso': 'Lasso', 'select-rect': 'Rect', 'select-ellipse': 'Ellipse' };
+        const sub = this.pad.selectSubTool || 'select-lasso';
+        this.selectBtn.innerHTML = icons[sub] || ICONS.selectLasso;
+        this.selectBtn.title = `${labels[sub] || 'Lasso'} Select (double-click for options)`;
     }
     
     updateBrushTypeButtons() {
@@ -1556,13 +1691,15 @@ class TopBar {
                 this.container.style.transform = 'none';
             }
         });
-        document.addEventListener('mousemove', (e) => {
+        this._boundTopBarMouseMove = (e) => {
             if (this.isDragging) {
                 this.container.style.left = `${e.clientX - this.dragOffset.x}px`;
                 this.container.style.top = `${e.clientY - this.dragOffset.y}px`;
             }
-        });
-        document.addEventListener('mouseup', () => { this.isDragging = false; });
+        };
+        this._boundTopBarMouseUp = () => { this.isDragging = false; };
+        document.addEventListener('mousemove', this._boundTopBarMouseMove);
+        document.addEventListener('mouseup', this._boundTopBarMouseUp);
         
         const newBtn = this.createBtn(ICONS.newFile, 'New');
 		newBtn.style.background = '#5c698f';
@@ -1577,6 +1714,22 @@ class TopBar {
 		loadBtn.style.color = '#333';
         loadBtn.onclick = () => this.pad.loadImage();
         this.container.appendChild(loadBtn);
+        
+        // Load Input Image button (only visible when input_image is connected)
+        if (this.pad.getInputImageUrl()) {
+            const loadInputBtn = this.createBtn(ICONS.folder, 'Load Input Image');
+            loadInputBtn.style.background = '#a6bcb5';
+            loadInputBtn.style.borderColor = '#606a6e';
+            loadInputBtn.style.color = '#333';
+            loadInputBtn.onclick = () => this.pad.loadInputImage();
+            this.container.appendChild(loadInputBtn);
+            
+            // Add a small label
+            const label = document.createElement('span');
+            label.textContent = 'Input';
+            label.style.cssText = 'font-size: 8px; color: #555; align-self: center; margin-left: -2px;';
+            this.container.appendChild(label);
+        }
         
         const saveBtn = this.createBtn(ICONS.save, 'Save');
 		saveBtn.style.background = '#d1acae';
@@ -1713,6 +1866,11 @@ class TopBar {
     }
     
     getElement() { return this.container; }
+    
+    destroy() {
+        document.removeEventListener('mousemove', this._boundTopBarMouseMove);
+        document.removeEventListener('mouseup', this._boundTopBarMouseUp);
+    }
 }
 
 
@@ -1763,6 +1921,18 @@ class DrawingPad {
         this.history = [];
         this.historyIndex = -1;
         this.snapshot = null;
+        this.hasUserDrawing = false;
+        
+        // Transform tool state (move/scale/rotate)
+        this.transform = null; // { snapshot, bounds, offsetX, offsetY, scaleX, scaleY, rotation, pivotX, pivotY }
+        this.transformDrag = null; // { type: 'move'|'scale-tl'|...|'rotate', startX, startY, startTransform }
+        this.isMoving = false;
+        
+        // Selection state
+        this.selection = null; // { type: 'rect'|'ellipse'|'lasso', path: Path2D, bounds: {x,y,w,h}, points: [] }
+        this.selectionDrag = null; // { startX, startY } — for creating a new selection
+        this.marchingAntsOffset = 0;
+        this.marchingAntsInterval = null;
         
         this.container = null;
         this.previewCanvas = null;
@@ -1777,6 +1947,31 @@ class DrawingPad {
         this.layersPanel = null;
         
         this.createUI();
+        
+        // Restore canvas data from saved workflow
+        if (canvasDataWidget?.value && canvasDataWidget.value.startsWith('data:image')) {
+            const savedData = canvasDataWidget.value;
+            const img = new Image();
+            img.onload = () => {
+                const layer = this.getActiveLayer();
+                if (layer) {
+                    const ctx = layer.canvas.getContext('2d');
+                    ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+                    ctx.drawImage(img, 0, 0, this.canvasWidth, this.canvasHeight);
+                    this.hasUserDrawing = true;
+                    // Update preview canvas
+                    const previewCtx = this.previewCanvas.getContext('2d');
+                    previewCtx.fillStyle = this.getBackgroundColor();
+                    previewCtx.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
+                    previewCtx.drawImage(layer.canvas, 0, 0);
+                    // Initialize history with restored state
+                    this.history = [];
+                    this.historyIndex = -1;
+                    this.saveToHistory();
+                }
+            };
+            img.src = savedData;
+        }
     }
     
     createUI() {
@@ -1829,6 +2024,14 @@ class DrawingPad {
                     this.canvasWidth = customW.value;
                     this.canvasHeight = customH.value;
                 }
+            } else if (presetWidget.value === 'From Input Image') {
+                // Try to get dimensions from connected input image
+                const dims = this.getInputImageDimensions();
+                if (dims) {
+                    this.canvasWidth = dims.width;
+                    this.canvasHeight = dims.height;
+                }
+                // If no input image connected, keep current canvas size
             } else {
                 const sizes = {
                     '512 x 512': [512, 512], '512 x 768': [512, 768], '768 x 512': [768, 512],
@@ -1845,6 +2048,41 @@ class DrawingPad {
         this.previewCanvas.height = this.canvasHeight;
     }
     
+    getInputImageDimensions() {
+        // Find input_image link on this node
+        const link = this.node.inputs?.find(i => i.name === 'input_image');
+        if (!link || link.link == null) return null;
+        
+        try {
+            const linkInfo = this.node.graph.links[link.link];
+            if (!linkInfo) return null;
+            const sourceNode = this.node.graph.getNodeById(linkInfo.origin_id);
+            if (!sourceNode) return null;
+            
+            // Try to read dimensions from source node's images/widgets
+            // Method 1: Check if source node has imgs (already executed)
+            if (sourceNode.imgs && sourceNode.imgs[0]) {
+                return { width: sourceNode.imgs[0].naturalWidth, height: sourceNode.imgs[0].naturalHeight };
+            }
+            
+            // Method 2: Check source node widgets for width/height
+            const wWidget = sourceNode.widgets?.find(w => w.name === 'width');
+            const hWidget = sourceNode.widgets?.find(w => w.name === 'height');
+            if (wWidget && hWidget) {
+                return { width: wWidget.value, height: hWidget.value };
+            }
+            
+            // Method 3: Check source node size property
+            if (sourceNode.properties?.['Node name for S&R'] === 'LoadImage' && sourceNode.imgs?.[0]) {
+                return { width: sourceNode.imgs[0].naturalWidth, height: sourceNode.imgs[0].naturalHeight };
+            }
+        } catch (e) {
+            console.log('[ComfySketch] Could not read input image dimensions:', e);
+        }
+        
+        return null;
+    }
+    
     getBackgroundColor() {
         const bgWidget = this.node.widgets?.find(w => w.name === 'background_color');
         return bgWidget?.value === 'white' ? '#FFFFFF' : bgWidget?.value === 'gray' ? '#808080' : '#000000';
@@ -1856,6 +2094,7 @@ class DrawingPad {
         this.previewCanvas.getContext('2d').fillRect(0, 0, this.canvasWidth, this.canvasHeight);
         this.layers = [];
         this.addLayer(false);
+        this.hasUserDrawing = false;
         if (saveHistory) { this.history = []; this.historyIndex = -1; this.saveToHistory(); this.saveCanvasData(); }
     }
     
@@ -1873,6 +2112,7 @@ class DrawingPad {
         this.layers = [];
         this.addLayer(false);
         this.activeLayerIndex = 0;
+        this.hasUserDrawing = false;
         this.renderLayers();
         this.layersPanel?.update();
         this.history = [];
@@ -1900,6 +2140,7 @@ class DrawingPad {
                         const w = img.width * scale, h = img.height * scale;
                         const x = (this.canvasWidth - w) / 2, y = (this.canvasHeight - h) / 2;
                         ctx.drawImage(img, x, y, w, h);
+                        this.hasUserDrawing = true;
                         this.renderLayers();
                         this.layersPanel?.update();
                         this.saveToHistory();
@@ -1955,7 +2196,7 @@ class DrawingPad {
         const canvas = document.createElement('canvas');
         canvas.width = this.canvasWidth;
         canvas.height = this.canvasHeight;
-        this.layers.push({ canvas, name: `Layer ${this.layers.length + 1}`, visible: true, opacity: 1 });
+        this.layers.push({ canvas, name: this.layers.length === 0 ? 'Background' : `Layer ${this.layers.length + 1}`, visible: true, opacity: 1 });
         this.activeLayerIndex = this.layers.length - 1;
         if (updatePanel) { this.renderLayers(); this.layersPanel?.update(); }
     }
@@ -1965,6 +2206,95 @@ class DrawingPad {
         this.layers.splice(this.activeLayerIndex, 1);
         this.activeLayerIndex = Math.min(this.activeLayerIndex, this.layers.length - 1);
         this.renderLayers(); this.layersPanel?.update(); this.saveToHistory();
+    }
+    
+    duplicateLayer() {
+        const layer = this.getActiveLayer();
+        if (!layer) return;
+        const newCanvas = document.createElement('canvas');
+        newCanvas.width = this.canvasWidth;
+        newCanvas.height = this.canvasHeight;
+        newCanvas.getContext('2d').drawImage(layer.canvas, 0, 0);
+        const newLayer = {
+            canvas: newCanvas,
+            name: layer.name + ' copy',
+            visible: layer.visible,
+            opacity: layer.opacity,
+        };
+        this.layers.splice(this.activeLayerIndex + 1, 0, newLayer);
+        this.activeLayerIndex = this.activeLayerIndex + 1;
+        this.renderLayers(); this.layersPanel?.update(); this.saveToHistory(); this.saveCanvasData();
+    }
+    
+    copySelectionToNewLayer() {
+        if (!this.selection) return;
+        const layer = this.getActiveLayer();
+        if (!layer) return;
+        
+        // Create new layer with selection content
+        const newCanvas = document.createElement('canvas');
+        newCanvas.width = this.canvasWidth;
+        newCanvas.height = this.canvasHeight;
+        const ctx = newCanvas.getContext('2d');
+        ctx.save();
+        ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+        ctx.drawImage(layer.canvas, 0, 0);
+        ctx.restore();
+        
+        // Insert new layer above current
+        const newLayer = {
+            canvas: newCanvas,
+            name: `Layer ${this.layers.length + 1}`,
+            visible: true,
+            opacity: 1,
+        };
+        this.layers.splice(this.activeLayerIndex + 1, 0, newLayer);
+        this.activeLayerIndex = this.activeLayerIndex + 1;
+        
+        this.clearSelection();
+        this.renderLayers();
+        this.layersPanel?.update();
+        this.saveToHistory();
+        this.saveCanvasData();
+    }
+    
+    cutSelectionToNewLayer() {
+        if (!this.selection) return;
+        const layer = this.getActiveLayer();
+        if (!layer) return;
+        
+        // Create new layer with selection content
+        const newCanvas = document.createElement('canvas');
+        newCanvas.width = this.canvasWidth;
+        newCanvas.height = this.canvasHeight;
+        const ctx = newCanvas.getContext('2d');
+        ctx.save();
+        ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+        ctx.drawImage(layer.canvas, 0, 0);
+        ctx.restore();
+        
+        // Clear the selection area from the original layer
+        const layerCtx = layer.canvas.getContext('2d');
+        layerCtx.save();
+        layerCtx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+        layerCtx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        layerCtx.restore();
+        
+        // Insert new layer above current
+        const newLayer = {
+            canvas: newCanvas,
+            name: `Layer ${this.layers.length + 1}`,
+            visible: true,
+            opacity: 1,
+        };
+        this.layers.splice(this.activeLayerIndex + 1, 0, newLayer);
+        this.activeLayerIndex = this.activeLayerIndex + 1;
+        
+        this.clearSelection();
+        this.renderLayers();
+        this.layersPanel?.update();
+        this.saveToHistory();
+        this.saveCanvasData();
     }
     
     mergeDown() {
@@ -2050,15 +2380,1205 @@ class DrawingPad {
     
     saveCanvasData() {
         this.renderLayers();
-        if (this.canvasDataWidget) this.canvasDataWidget.value = this.previewCanvas.toDataURL('image/png');
+        // Throttle saves to avoid overwhelming the WebSocket transport
+        if (this._saveTimeout) clearTimeout(this._saveTimeout);
+        this._saveTimeout = setTimeout(() => {
+            if (this.canvasDataWidget) {
+                this.canvasDataWidget.value = this.previewCanvas.toDataURL('image/jpeg', 0.85);
+            }
+            this.node.setDirtyCanvas(true, true);
+        }, 300);
+    }
+    
+    // Immediate save (used by closeFullscreen where we can't defer)
+    saveCanvasDataImmediate() {
+        this.renderLayers();
+        if (this._saveTimeout) clearTimeout(this._saveTimeout);
+        if (this.canvasDataWidget) {
+            this.canvasDataWidget.value = this.previewCanvas.toDataURL('image/jpeg', 0.85);
+        }
         this.node.setDirtyCanvas(true, true);
     }
     
+    // ==================== TRANSFORM (Move/Scale/Rotate) ====================
+    
+    getContentBounds(layerCanvas) {
+        const ctx = layerCanvas.getContext('2d');
+        const imageData = ctx.getImageData(0, 0, this.canvasWidth, this.canvasHeight);
+        const data = imageData.data;
+        let minX = this.canvasWidth, minY = this.canvasHeight, maxX = 0, maxY = 0;
+        let hasContent = false;
+        
+        for (let y = 0; y < this.canvasHeight; y++) {
+            for (let x = 0; x < this.canvasWidth; x++) {
+                const alpha = data[(y * this.canvasWidth + x) * 4 + 3];
+                if (alpha > 0) {
+                    hasContent = true;
+                    if (x < minX) minX = x;
+                    if (x > maxX) maxX = x;
+                    if (y < minY) minY = y;
+                    if (y > maxY) maxY = y;
+                }
+            }
+        }
+        
+        if (!hasContent) return null;
+        return { x: minX, y: minY, w: maxX - minX + 1, h: maxY - minY + 1 };
+    }
+    
+    initTransform() {
+        const layer = this.getActiveLayer();
+        if (!layer) return;
+        
+        let bounds;
+        const snapshot = document.createElement('canvas');
+        snapshot.width = this.canvasWidth;
+        snapshot.height = this.canvasHeight;
+        const snapCtx = snapshot.getContext('2d');
+        
+        // If there's an active selection, transform only the selected content
+        if (this.selection) {
+            bounds = this.selection.bounds;
+            
+            // Extract the selected content into snapshot
+            snapCtx.save();
+            snapCtx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+            snapCtx.drawImage(layer.canvas, 0, 0);
+            snapCtx.restore();
+            
+            // Store the full layer backup (WITHOUT cutting)
+            const layerBackup = document.createElement('canvas');
+            layerBackup.width = this.canvasWidth;
+            layerBackup.height = this.canvasHeight;
+            layerBackup.getContext('2d').drawImage(layer.canvas, 0, 0);
+            
+            // Clear the selection visuals but keep the selection data for reference
+            this.stopMarchingAnts();
+            this.removeSelectionOverlay();
+            
+            // Center pivot on the bounds
+            const pivotX = bounds.x + bounds.w / 2;
+            const pivotY = bounds.y + bounds.h / 2;
+            
+            this.transform = {
+                snapshot,
+                layerBackup, // Full layer content before transform
+                bounds,
+                offsetX: 0,
+                offsetY: 0,
+                scaleX: 1,
+                scaleY: 1,
+                rotation: 0,
+                pivotX,
+                pivotY,
+                fromSelection: true,
+                selectionPath: this.selection.path,
+                selectionUseEvenOdd: this.selection.useEvenOdd,
+            };
+            
+            this.selection = null;
+        } else {
+            // No selection - transform all content on the layer
+            bounds = this.getContentBounds(layer.canvas);
+            if (!bounds) return;
+            
+            snapCtx.drawImage(layer.canvas, 0, 0);
+            
+            // Center pivot on the bounds
+            const pivotX = bounds.x + bounds.w / 2;
+            const pivotY = bounds.y + bounds.h / 2;
+            
+            this.transform = {
+                snapshot,
+                bounds,
+                offsetX: 0,
+                offsetY: 0,
+                scaleX: 1,
+                scaleY: 1,
+                rotation: 0,
+                pivotX,
+                pivotY,
+                fromSelection: false,
+            };
+        }
+        
+        this.applyTransformPreview();
+    }
+    
+    applyTransformPreview() {
+        if (!this.transform) return;
+        const layer = this.getActiveLayer();
+        if (!layer) return;
+        
+        const t = this.transform;
+        const ctx = layer.canvas.getContext('2d');
+        ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        
+        // If from selection, restore the full layer first (untouched background)
+        if (t.fromSelection && t.layerBackup) {
+            // Draw backup but with the original selection area erased
+            ctx.drawImage(t.layerBackup, 0, 0);
+            // Clear original selection area so the transformed content can be drawn on top cleanly
+            if (t.selectionPath) {
+                ctx.save();
+                ctx.clip(t.selectionPath, t.selectionUseEvenOdd ? 'evenodd' : 'nonzero');
+                ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+                ctx.restore();
+            }
+        }
+        
+        ctx.save();
+        // Translate to pivot + offset + anchor offset, rotate, scale, then draw from pivot
+        const ax = t.anchorOffsetX || 0;
+        const ay = t.anchorOffsetY || 0;
+        const px = t.pivotX + t.offsetX + ax;
+        const py = t.pivotY + t.offsetY + ay;
+        ctx.translate(px, py);
+        ctx.rotate(t.rotation);
+        ctx.scale(t.scaleX, t.scaleY);
+        ctx.translate(-t.pivotX, -t.pivotY);
+        ctx.drawImage(t.snapshot, 0, 0);
+        ctx.restore();
+        
+        this.renderLayers();
+        this.drawTransformHandles();
+    }
+    
+    drawTransformHandles() {
+        if (!this.transform || !this.displayCanvas) return;
+        
+        // Remove old overlay if exists
+        if (this.handleOverlay) {
+            this.handleOverlay.remove();
+        }
+        
+        // Create SVG overlay covering the full viewport
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.style.cssText = `
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 100000;
+            overflow: visible;
+        `;
+        this.handleOverlay = svg;
+        this.fullscreenOverlay.appendChild(svg);
+        
+        const t = this.transform;
+        const b = t.bounds;
+        
+        // Convert canvas-space points to screen-space
+        const rect = this.displayCanvas.getBoundingClientRect();
+        const toScreen = (cx, cy) => {
+            return {
+                x: rect.left + (cx / this.canvasWidth) * rect.width,
+                y: rect.top + (cy / this.canvasHeight) * rect.height,
+            };
+        };
+        
+        // Get transformed corners in canvas space, then convert to screen
+        const corners = [
+            { x: b.x, y: b.y },
+            { x: b.x + b.w, y: b.y },
+            { x: b.x + b.w, y: b.y + b.h },
+            { x: b.x, y: b.y + b.h },
+        ];
+        const transformed = corners.map(c => {
+            const cp = this.transformPoint(c.x, c.y, t);
+            return toScreen(cp.x, cp.y);
+        });
+        
+        // Bounding box (dashed)
+        const boxPath = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        boxPath.setAttribute('points', transformed.map(p => `${p.x},${p.y}`).join(' '));
+        boxPath.setAttribute('fill', 'none');
+        boxPath.setAttribute('stroke', '#29f');
+        boxPath.setAttribute('stroke-width', '1.5');
+        boxPath.setAttribute('stroke-dasharray', '4,4');
+        svg.appendChild(boxPath);
+        
+        // Corner handles
+        const handleSize = 12;
+        transformed.forEach(p => {
+            const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            r.setAttribute('x', p.x - handleSize / 2);
+            r.setAttribute('y', p.y - handleSize / 2);
+            r.setAttribute('width', handleSize);
+            r.setAttribute('height', handleSize);
+            r.setAttribute('fill', '#fff');
+            r.setAttribute('stroke', '#29f');
+            r.setAttribute('stroke-width', '1.5');
+            svg.appendChild(r);
+        });
+        
+        // Edge midpoint handles
+        const edgeHandleSize = handleSize - 2;
+        for (let i = 0; i < 4; i++) {
+            const next = (i + 1) % 4;
+            const mx = (transformed[i].x + transformed[next].x) / 2;
+            const my = (transformed[i].y + transformed[next].y) / 2;
+            const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            r.setAttribute('x', mx - edgeHandleSize / 2);
+            r.setAttribute('y', my - edgeHandleSize / 2);
+            r.setAttribute('width', edgeHandleSize);
+            r.setAttribute('height', edgeHandleSize);
+            r.setAttribute('fill', '#fff');
+            r.setAttribute('stroke', '#29f');
+            r.setAttribute('stroke-width', '1.5');
+            svg.appendChild(r);
+        }
+        
+        // Rotation handle
+        const topMid = {
+            x: (transformed[0].x + transformed[1].x) / 2,
+            y: (transformed[0].y + transformed[1].y) / 2,
+        };
+        const dx = transformed[1].x - transformed[0].x;
+        const dy = transformed[1].y - transformed[0].y;
+        const len = Math.hypot(dx, dy) || 1;
+        const nx = -dy / len;
+        const ny = dx / len;
+        const rotHandleDist = 25;
+        const rotHandle = {
+            x: topMid.x + nx * rotHandleDist,
+            y: topMid.y + ny * rotHandleDist,
+        };
+        
+        // Line to rotation handle
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', topMid.x);
+        line.setAttribute('y1', topMid.y);
+        line.setAttribute('x2', rotHandle.x);
+        line.setAttribute('y2', rotHandle.y);
+        line.setAttribute('stroke', '#29f');
+        line.setAttribute('stroke-width', '1');
+        svg.appendChild(line);
+        
+        // Rotation circle
+        const rotCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        rotCircle.setAttribute('cx', rotHandle.x);
+        rotCircle.setAttribute('cy', rotHandle.y);
+        rotCircle.setAttribute('r', '6');
+        rotCircle.setAttribute('fill', '#fff');
+        rotCircle.setAttribute('stroke', '#29f');
+        rotCircle.setAttribute('stroke-width', '1.5');
+        svg.appendChild(rotCircle);
+        
+        // Small arc inside rotation handle
+        const arcR = 3.5;
+        const arc = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        const startAngle = -0.7 * Math.PI;
+        const endAngle = 0.3 * Math.PI;
+        const x1 = rotHandle.x + arcR * Math.cos(startAngle);
+        const y1 = rotHandle.y + arcR * Math.sin(startAngle);
+        const x2 = rotHandle.x + arcR * Math.cos(endAngle);
+        const y2 = rotHandle.y + arcR * Math.sin(endAngle);
+        arc.setAttribute('d', `M ${x1} ${y1} A ${arcR} ${arcR} 0 1 1 ${x2} ${y2}`);
+        arc.setAttribute('fill', 'none');
+        arc.setAttribute('stroke', '#29f');
+        arc.setAttribute('stroke-width', '1');
+        svg.appendChild(arc);
+        
+        // Update preview
+        this.previewCanvas.getContext('2d').drawImage(this.displayCanvas, 0, 0);
+    }
+    
+    removeHandleOverlay() {
+        if (this.handleOverlay) {
+            this.handleOverlay.remove();
+            this.handleOverlay = null;
+        }
+    }
+    
+    transformPoint(x, y, t) {
+        // Apply the same transform as applyTransformPreview
+        const px = t.pivotX;
+        const py = t.pivotY;
+        
+        // Translate relative to pivot
+        let rx = x - px;
+        let ry = y - py;
+        
+        // Scale
+        rx *= t.scaleX;
+        ry *= t.scaleY;
+        
+        // Rotate
+        const cos = Math.cos(t.rotation);
+        const sin = Math.sin(t.rotation);
+        const rotX = rx * cos - ry * sin;
+        const rotY = rx * sin + ry * cos;
+        
+        // Translate back + offset
+        return {
+            x: rotX + px + t.offsetX + (t.anchorOffsetX || 0),
+            y: rotY + py + t.offsetY + (t.anchorOffsetY || 0),
+        };
+    }
+    
+    getTransformHandleAtPos(pos) {
+        if (!this.transform) return null;
+        const t = this.transform;
+        const b = t.bounds;
+        const threshold = 14;
+        
+        // Corners: TL, TR, BR, BL
+        const corners = [
+            { x: b.x, y: b.y, id: 'scale-tl' },
+            { x: b.x + b.w, y: b.y, id: 'scale-tr' },
+            { x: b.x + b.w, y: b.y + b.h, id: 'scale-br' },
+            { x: b.x, y: b.y + b.h, id: 'scale-bl' },
+        ];
+        
+        // Edge midpoints: top, right, bottom, left
+        const edgeMids = [
+            { x: b.x + b.w/2, y: b.y, id: 'scale-t' },
+            { x: b.x + b.w, y: b.y + b.h/2, id: 'scale-r' },
+            { x: b.x + b.w/2, y: b.y + b.h, id: 'scale-b' },
+            { x: b.x, y: b.y + b.h/2, id: 'scale-l' },
+        ];
+        
+        // Rotation handle
+        const tl = this.transformPoint(b.x, b.y, t);
+        const tr = this.transformPoint(b.x + b.w, b.y, t);
+        const topMid = { x: (tl.x + tr.x) / 2, y: (tl.y + tr.y) / 2 };
+        const dx = tr.x - tl.x;
+        const dy = tr.y - tl.y;
+        const len = Math.hypot(dx, dy) || 1;
+        const nx = -dy / len;
+        const ny = dx / len;
+        const rotHandle = { x: topMid.x + nx * 25, y: topMid.y + ny * 25 };
+        
+        // Check rotation handle first
+        if (Math.hypot(pos.x - rotHandle.x, pos.y - rotHandle.y) < threshold) {
+            return 'rotate';
+        }
+        
+        // Check corners (transformed positions)
+        for (const c of corners) {
+            const tp = this.transformPoint(c.x, c.y, t);
+            if (Math.hypot(pos.x - tp.x, pos.y - tp.y) < threshold) return c.id;
+        }
+        
+        // Check edge midpoints
+        for (const e of edgeMids) {
+            const tp = this.transformPoint(e.x, e.y, t);
+            if (Math.hypot(pos.x - tp.x, pos.y - tp.y) < threshold) return e.id;
+        }
+        
+        // Check full edge lines — clicking anywhere along an edge triggers scale
+        const transformedCorners = corners.map(c => this.transformPoint(c.x, c.y, t));
+        const edges = [
+            { a: transformedCorners[0], b: transformedCorners[1], id: 'scale-t' }, // TL → TR (top)
+            { a: transformedCorners[1], b: transformedCorners[2], id: 'scale-r' }, // TR → BR (right)
+            { a: transformedCorners[2], b: transformedCorners[3], id: 'scale-b' }, // BR → BL (bottom)
+            { a: transformedCorners[3], b: transformedCorners[0], id: 'scale-l' }, // BL → TL (left)
+        ];
+        
+        for (const edge of edges) {
+            if (this.distToSegment(pos, edge.a, edge.b) < threshold) return edge.id;
+        }
+        
+        // Check if inside the transformed bounding box (for move)
+        if (this.isPointInTransformedBounds(pos)) return 'move';
+        
+        return null;
+    }
+    
+    distToSegment(p, a, b) {
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const lenSq = dx * dx + dy * dy;
+        if (lenSq === 0) return Math.hypot(p.x - a.x, p.y - a.y);
+        let t = ((p.x - a.x) * dx + (p.y - a.y) * dy) / lenSq;
+        t = Math.max(0, Math.min(1, t));
+        return Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy));
+    }
+    
+    applyScaleDrag(dx, dy, shiftKey) {
+        const st = this.transformDrag.startTransform;
+        const handle = this.transformDrag.type.replace('scale-', '');
+        const b = this.transform.bounds;
+        
+        // Inverse-rotate the delta to work in local space
+        const cos = Math.cos(-st.rotation);
+        const sin = Math.sin(-st.rotation);
+        const ldx = dx * cos - dy * sin;
+        const ldy = dx * sin + dy * cos;
+        
+        let newScaleX = st.scaleX;
+        let newScaleY = st.scaleY;
+        
+        const bw = b.w;
+        const bh = b.h;
+        
+        const isCorner = (handle === 'tl' || handle === 'tr' || handle === 'bl' || handle === 'br');
+        
+        if (isCorner) {
+            // Corner handles: scale from center (use half-width as reference)
+            const hw = bw / 2;
+            const hh = bh / 2;
+            
+            if (handle.includes('r')) newScaleX = st.scaleX + (hw > 0 ? ldx / hw : 0);
+            if (handle.includes('l')) newScaleX = st.scaleX - (hw > 0 ? ldx / hw : 0);
+            if (handle.includes('b')) newScaleY = st.scaleY + (hh > 0 ? ldy / hh : 0);
+            if (handle.includes('t')) newScaleY = st.scaleY - (hh > 0 ? ldy / hh : 0);
+            
+            // Shift = proportional scaling for corners
+            if (shiftKey) {
+                const avgScale = (Math.abs(newScaleX) + Math.abs(newScaleY)) / 2;
+                newScaleX = avgScale;
+                newScaleY = avgScale;
+            }
+            
+            // No offset shift needed — scales from center
+            this.transform.anchorOffsetX = 0;
+            this.transform.anchorOffsetY = 0;
+        } else {
+            // Edge handles: scale from opposite edge (use full width as reference)
+            if (handle === 'r') {
+                newScaleX = st.scaleX + (bw > 0 ? ldx / bw : 0);
+                // Anchor at left edge: shift offset so left edge stays put
+                this.transform.anchorOffsetX = 0; // left edge = pivot - bw/2 * scale, need to compensate
+            } else if (handle === 'l') {
+                newScaleX = st.scaleX - (bw > 0 ? ldx / bw : 0);
+            } else if (handle === 'b') {
+                newScaleY = st.scaleY + (bh > 0 ? ldy / bh : 0);
+            } else if (handle === 't') {
+                newScaleY = st.scaleY - (bh > 0 ? ldy / bh : 0);
+            }
+            
+            // Compute offset to keep opposite edge anchored
+            // The pivot is at center. When scaling from center, both edges move equally.
+            // To anchor the opposite edge, we need to shift by half the scale difference * bounds size.
+            const dScaleX = newScaleX - st.scaleX;
+            const dScaleY = newScaleY - st.scaleY;
+            
+            let anchorDx = 0, anchorDy = 0;
+            
+            if (handle === 'r') anchorDx = (dScaleX * bw) / 2;
+            if (handle === 'l') anchorDx = -(dScaleX * bw) / 2;
+            if (handle === 'b') anchorDy = (dScaleY * bh) / 2;
+            if (handle === 't') anchorDy = -(dScaleY * bh) / 2;
+            
+            // Rotate the anchor offset back to world space
+            const wcos = Math.cos(st.rotation);
+            const wsin = Math.sin(st.rotation);
+            this.transform.anchorOffsetX = anchorDx * wcos - anchorDy * wsin;
+            this.transform.anchorOffsetY = anchorDx * wsin + anchorDy * wcos;
+        }
+        
+        this.transform.scaleX = newScaleX;
+        this.transform.scaleY = newScaleY;
+    }
+    
+    stopEdgeScale() {
+        if (this.edgeScaleInterval) {
+            clearInterval(this.edgeScaleInterval);
+            this.edgeScaleInterval = null;
+        }
+    }
+    
+    isPointInTransformedBounds(pos) {
+        if (!this.transform) return false;
+        const t = this.transform;
+        const b = t.bounds;
+        
+        const corners = [
+            this.transformPoint(b.x, b.y, t),
+            this.transformPoint(b.x + b.w, b.y, t),
+            this.transformPoint(b.x + b.w, b.y + b.h, t),
+            this.transformPoint(b.x, b.y + b.h, t),
+        ];
+        
+        // Point-in-polygon (ray casting)
+        let inside = false;
+        for (let i = 0, j = 3; i < 4; j = i++) {
+            const xi = corners[i].x, yi = corners[i].y;
+            const xj = corners[j].x, yj = corners[j].y;
+            if ((yi > pos.y) !== (yj > pos.y) && pos.x < (xj - xi) * (pos.y - yi) / (yj - yi) + xi) {
+                inside = !inside;
+            }
+        }
+        return inside;
+    }
+    
+    // ==================== SELECTION SYSTEM ====================
+    
+    clearSelection() {
+        this.selection = null;
+        this.selectionDrag = null;
+        this.stopMarchingAnts();
+        this.removeSelectionOverlay();
+        if (this.displayCanvas) this.renderLayers();
+    }
+    
+    makeSelectionPath(type, x, y, w, h, points) {
+        const path = new Path2D();
+        if (type === 'rect') {
+            path.rect(x, y, w, h);
+        } else if (type === 'ellipse') {
+            const cx = x + w / 2;
+            const cy = y + h / 2;
+            path.ellipse(cx, cy, Math.abs(w / 2), Math.abs(h / 2), 0, 0, Math.PI * 2);
+        } else if (type === 'lasso' && points && points.length > 2) {
+            path.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                path.lineTo(points[i].x, points[i].y);
+            }
+            path.closePath();
+        }
+        return path;
+    }
+    
+    finalizeSelection(type, startPos, endPos, lassoPoints) {
+        let x, y, w, h, points;
+        
+        if (type === 'lasso') {
+            if (!lassoPoints || lassoPoints.length < 3) return;
+            points = lassoPoints;
+            // Compute bounds
+            let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+            points.forEach(p => {
+                minX = Math.min(minX, p.x); minY = Math.min(minY, p.y);
+                maxX = Math.max(maxX, p.x); maxY = Math.max(maxY, p.y);
+            });
+            x = minX; y = minY; w = maxX - minX; h = maxY - minY;
+        } else {
+            x = Math.min(startPos.x, endPos.x);
+            y = Math.min(startPos.y, endPos.y);
+            w = Math.abs(endPos.x - startPos.x);
+            h = Math.abs(endPos.y - startPos.y);
+            if (w < 2 && h < 2) return; // Too small
+        }
+        
+        const path = this.makeSelectionPath(type, x, y, w, h, points);
+        this.selection = { type, path, bounds: { x, y, w, h }, points: points || null };
+        
+        this.startMarchingAnts();
+        this.renderLayers();
+    }
+    
+    applySelectionClip(ctx) {
+        if (!this.selection) return;
+        ctx.save();
+        ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+    }
+    
+    restoreSelectionClip(ctx) {
+        if (!this.selection) return;
+        ctx.restore();
+    }
+    
+    deleteSelectionContent() {
+        if (!this.selection) return;
+        const layer = this.getActiveLayer();
+        if (!layer) return;
+        const ctx = layer.canvas.getContext('2d');
+        ctx.save();
+        ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+        ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        ctx.restore();
+        this.hasUserDrawing = true;
+        this.renderLayers();
+        this.saveToHistory();
+        this.saveCanvasData();
+    }
+    
+    selectAll() {
+        const path = new Path2D();
+        path.rect(0, 0, this.canvasWidth, this.canvasHeight);
+        this.selection = {
+            type: 'rect',
+            path,
+            bounds: { x: 0, y: 0, w: this.canvasWidth, h: this.canvasHeight },
+            points: null,
+        };
+        this.startMarchingAnts();
+        this.renderLayers();
+    }
+    
+    invertSelection() {
+        if (!this.selection) return;
+        
+        const sel = this.selection;
+        const path = new Path2D();
+        
+        // Outer rect (clockwise) — the full canvas
+        path.rect(0, 0, this.canvasWidth, this.canvasHeight);
+        
+        // Inner selection (added to the same path — evenodd will exclude it)
+        if (sel.type === 'rect') {
+            const b = sel.bounds;
+            // Draw inner rect counter-clockwise
+            path.moveTo(b.x, b.y);
+            path.lineTo(b.x, b.y + b.h);
+            path.lineTo(b.x + b.w, b.y + b.h);
+            path.lineTo(b.x + b.w, b.y);
+            path.closePath();
+        } else if (sel.type === 'ellipse') {
+            const b = sel.bounds;
+            const cx = b.x + b.w / 2;
+            const cy = b.y + b.h / 2;
+            const rx = Math.abs(b.w / 2);
+            const ry = Math.abs(b.h / 2);
+            // Ellipse drawn counter-clockwise
+            path.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2, true);
+        } else if (sel.type === 'lasso' && sel.points && sel.points.length > 2) {
+            // Lasso points in reverse order
+            const pts = sel.points;
+            path.moveTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
+            for (let i = pts.length - 2; i >= 0; i--) {
+                path.lineTo(pts[i].x, pts[i].y);
+            }
+            path.closePath();
+        }
+        
+        // Compute inverted bounds (full canvas)
+        const invertedBounds = { x: 0, y: 0, w: this.canvasWidth, h: this.canvasHeight };
+        
+        // Store original selection info for the overlay visualization
+        this.selection = {
+            type: 'inverted',
+            path,
+            bounds: invertedBounds,
+            points: null,
+            originalSelection: sel, // keep reference for marching ants
+            useEvenOdd: true,
+        };
+        
+        this.startMarchingAnts();
+        this.renderLayers();
+    }
+    
+    // Marching ants animation
+    startMarchingAnts() {
+        this.stopMarchingAnts();
+        this.marchingAntsOffset = 0;
+        this.marchingAntsInterval = setInterval(() => {
+            this.marchingAntsOffset = (this.marchingAntsOffset + 1) % 16;
+            this.drawSelectionOverlay();
+        }, 80);
+    }
+    
+    stopMarchingAnts() {
+        if (this.marchingAntsInterval) {
+            clearInterval(this.marchingAntsInterval);
+            this.marchingAntsInterval = null;
+        }
+    }
+    
+    removeSelectionOverlay() {
+        if (this.selectionOverlay) {
+            this.selectionOverlay.remove();
+            this.selectionOverlay = null;
+        }
+    }
+    
+    drawSelectionOverlay() {
+        if (!this.selection || !this.displayCanvas || !this.fullscreenOverlay) return;
+        
+        this.removeSelectionOverlay();
+        
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.style.cssText = `
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 99999;
+            overflow: visible;
+        `;
+        this.selectionOverlay = svg;
+        this.fullscreenOverlay.appendChild(svg);
+        
+        const rect = this.displayCanvas.getBoundingClientRect();
+        const toScreen = (cx, cy) => ({
+            x: rect.left + (cx / this.canvasWidth) * rect.width,
+            y: rect.top + (cy / this.canvasHeight) * rect.height,
+        });
+        
+        const sel = this.selection;
+        let pathStr = '';
+        
+        // For inverted selection, draw ants on the original shape + canvas border
+        const drawSel = sel.type === 'inverted' && sel.originalSelection ? sel.originalSelection : sel;
+        
+        if (drawSel.type === 'rect') {
+            const tl = toScreen(drawSel.bounds.x, drawSel.bounds.y);
+            const br = toScreen(drawSel.bounds.x + drawSel.bounds.w, drawSel.bounds.y + drawSel.bounds.h);
+            const w = br.x - tl.x, h = br.y - tl.y;
+            pathStr = `M ${tl.x} ${tl.y} h ${w} v ${h} h ${-w} Z`;
+        } else if (drawSel.type === 'ellipse') {
+            const c = toScreen(drawSel.bounds.x + drawSel.bounds.w / 2, drawSel.bounds.y + drawSel.bounds.h / 2);
+            const rx = (drawSel.bounds.w / this.canvasWidth) * rect.width / 2;
+            const ry = (drawSel.bounds.h / this.canvasHeight) * rect.height / 2;
+            pathStr = `M ${c.x - rx} ${c.y} A ${rx} ${ry} 0 1 1 ${c.x + rx} ${c.y} A ${rx} ${ry} 0 1 1 ${c.x - rx} ${c.y} Z`;
+        } else if (drawSel.type === 'lasso' && drawSel.points && drawSel.points.length > 2) {
+            const first = toScreen(drawSel.points[0].x, drawSel.points[0].y);
+            pathStr = `M ${first.x} ${first.y}`;
+            for (let i = 1; i < drawSel.points.length; i++) {
+                const p = toScreen(drawSel.points[i].x, drawSel.points[i].y);
+                pathStr += ` L ${p.x} ${p.y}`;
+            }
+            pathStr += ' Z';
+        }
+        
+        if (!pathStr) return;
+        
+        // For inverted selection, also draw ants on the canvas border
+        if (sel.type === 'inverted') {
+            const tl = toScreen(0, 0);
+            const br = toScreen(this.canvasWidth, this.canvasHeight);
+            const borderPath = `M ${tl.x} ${tl.y} h ${br.x - tl.x} v ${br.y - tl.y} h ${-(br.x - tl.x)} Z`;
+            
+            const borderBg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            borderBg.setAttribute('d', borderPath);
+            borderBg.setAttribute('fill', 'none');
+            borderBg.setAttribute('stroke', '#fff');
+            borderBg.setAttribute('stroke-width', '1.5');
+            svg.appendChild(borderBg);
+            
+            const borderFg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            borderFg.setAttribute('d', borderPath);
+            borderFg.setAttribute('fill', 'none');
+            borderFg.setAttribute('stroke', '#000');
+            borderFg.setAttribute('stroke-width', '1.5');
+            borderFg.setAttribute('stroke-dasharray', '6,6');
+            borderFg.setAttribute('stroke-dashoffset', this.marchingAntsOffset);
+            svg.appendChild(borderFg);
+        }
+        
+        // White background line (inner shape)
+        const bg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        bg.setAttribute('d', pathStr);
+        bg.setAttribute('fill', 'none');
+        bg.setAttribute('stroke', '#fff');
+        bg.setAttribute('stroke-width', '1.5');
+        svg.appendChild(bg);
+        
+        // Black marching ants line (inner shape)
+        const fg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        fg.setAttribute('d', pathStr);
+        fg.setAttribute('fill', 'none');
+        fg.setAttribute('stroke', '#000');
+        fg.setAttribute('stroke-width', '1.5');
+        fg.setAttribute('stroke-dasharray', '6,6');
+        fg.setAttribute('stroke-dashoffset', this.marchingAntsOffset);
+        svg.appendChild(fg);
+    }
+    
+    drawSelectionPreview(startPos, currentPos, type) {
+        // Draw live preview while dragging
+        if (!this.displayCanvas) return;
+        this.renderLayers();
+        
+        this.removeSelectionOverlay();
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.style.cssText = `
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 99999;
+            overflow: visible;
+        `;
+        this.selectionOverlay = svg;
+        this.fullscreenOverlay.appendChild(svg);
+        
+        const rect = this.displayCanvas.getBoundingClientRect();
+        const toScreen = (cx, cy) => ({
+            x: rect.left + (cx / this.canvasWidth) * rect.width,
+            y: rect.top + (cy / this.canvasHeight) * rect.height,
+        });
+        
+        let pathStr = '';
+        
+        if (type === 'rect') {
+            const tl = toScreen(Math.min(startPos.x, currentPos.x), Math.min(startPos.y, currentPos.y));
+            const br = toScreen(Math.max(startPos.x, currentPos.x), Math.max(startPos.y, currentPos.y));
+            pathStr = `M ${tl.x} ${tl.y} h ${br.x - tl.x} v ${br.y - tl.y} h ${-(br.x - tl.x)} Z`;
+        } else if (type === 'ellipse') {
+            const cx = (startPos.x + currentPos.x) / 2;
+            const cy = (startPos.y + currentPos.y) / 2;
+            const c = toScreen(cx, cy);
+            const rx = Math.abs(currentPos.x - startPos.x) / 2 / this.canvasWidth * rect.width;
+            const ry = Math.abs(currentPos.y - startPos.y) / 2 / this.canvasHeight * rect.height;
+            if (rx > 0 && ry > 0) {
+                pathStr = `M ${c.x - rx} ${c.y} A ${rx} ${ry} 0 1 1 ${c.x + rx} ${c.y} A ${rx} ${ry} 0 1 1 ${c.x - rx} ${c.y} Z`;
+            }
+        }
+        
+        if (!pathStr) return;
+        
+        const bg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        bg.setAttribute('d', pathStr);
+        bg.setAttribute('fill', 'rgba(100,150,255,0.1)');
+        bg.setAttribute('stroke', '#fff');
+        bg.setAttribute('stroke-width', '1.5');
+        svg.appendChild(bg);
+        
+        const fg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        fg.setAttribute('d', pathStr);
+        fg.setAttribute('fill', 'none');
+        fg.setAttribute('stroke', '#000');
+        fg.setAttribute('stroke-width', '1.5');
+        fg.setAttribute('stroke-dasharray', '6,6');
+        svg.appendChild(fg);
+    }
+    
+    drawLassoPreview(points) {
+        if (!this.displayCanvas || !points || points.length < 2) return;
+        this.renderLayers();
+        
+        this.removeSelectionOverlay();
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.style.cssText = `
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 99999;
+            overflow: visible;
+        `;
+        this.selectionOverlay = svg;
+        this.fullscreenOverlay.appendChild(svg);
+        
+        const rect = this.displayCanvas.getBoundingClientRect();
+        const toScreen = (cx, cy) => ({
+            x: rect.left + (cx / this.canvasWidth) * rect.width,
+            y: rect.top + (cy / this.canvasHeight) * rect.height,
+        });
+        
+        const first = toScreen(points[0].x, points[0].y);
+        let pathStr = `M ${first.x} ${first.y}`;
+        for (let i = 1; i < points.length; i++) {
+            const p = toScreen(points[i].x, points[i].y);
+            pathStr += ` L ${p.x} ${p.y}`;
+        }
+        
+        const bg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        bg.setAttribute('d', pathStr);
+        bg.setAttribute('fill', 'none');
+        bg.setAttribute('stroke', '#fff');
+        bg.setAttribute('stroke-width', '1.5');
+        svg.appendChild(bg);
+        
+        const fg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        fg.setAttribute('d', pathStr);
+        fg.setAttribute('fill', 'none');
+        fg.setAttribute('stroke', '#000');
+        fg.setAttribute('stroke-width', '1.5');
+        fg.setAttribute('stroke-dasharray', '6,6');
+        svg.appendChild(fg);
+    }
+    
+    commitTransform() {
+        if (!this.transform) return;
+        // The layer canvas already has the transformed content from applyTransformPreview
+        this.transform = null;
+        this.transformDrag = null;
+        this.removeHandleOverlay();
+        this.hasUserDrawing = true;
+        this.renderLayers();
+        this.saveToHistory();
+        this.layersPanel?.update();
+        this.saveCanvasData();
+    }
+    
+    isPointInBounds(pos, bounds) {
+        return pos.x >= bounds.x && pos.x <= bounds.x + bounds.w &&
+               pos.y >= bounds.y && pos.y <= bounds.y + bounds.h;
+    }
+    
+    cancelTransform() {
+        if (!this.transform) return;
+        // Restore the original state
+        const layer = this.getActiveLayer();
+        if (layer) {
+            const ctx = layer.canvas.getContext('2d');
+            ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+            // If from selection, restore full layer backup (original untouched layer)
+            if (this.transform.fromSelection && this.transform.layerBackup) {
+                ctx.drawImage(this.transform.layerBackup, 0, 0);
+            } else {
+                ctx.drawImage(this.transform.snapshot, 0, 0);
+            }
+        }
+        this.transform = null;
+        this.transformDrag = null;
+        this.removeHandleOverlay();
+        this.renderLayers();
+    }
+    
+    getTransformCursor(handleType) {
+        if (!handleType) return 'default';
+        if (handleType === 'move') return 'move';
+        if (handleType === 'rotate') return 'grab';
+        // Scale cursors
+        const cursors = {
+            'scale-tl': 'nwse-resize', 'scale-br': 'nwse-resize',
+            'scale-tr': 'nesw-resize', 'scale-bl': 'nesw-resize',
+            'scale-t': 'ns-resize', 'scale-b': 'ns-resize',
+            'scale-l': 'ew-resize', 'scale-r': 'ew-resize',
+        };
+        return cursors[handleType] || 'default';
+    }
+    
     // Fullscreen
+    // Load input image from connected node
+    async loadInputImageIfNeeded() {
+        // Only auto-load if canvas has no drawing (blank state)
+        if (this.hasUserDrawing) return;
+        await this.loadInputImage();
+    }
+    
+    async loadInputImage() {
+        let inputImageUrl = this.getInputImageUrl();
+        if (!inputImageUrl) {
+            console.log('[ComfySketch] No input image URL found');
+            alert('No input image connected or available.');
+            return;
+        }
+        
+        // If we got PENDING_EXECUTION, try waiting a bit and check again
+        if (inputImageUrl === 'PENDING_EXECUTION') {
+            console.log('[ComfySketch] Image pending, waiting 500ms and retrying...');
+            
+            // Wait and retry
+            await new Promise(resolve => setTimeout(resolve, 500));
+            inputImageUrl = this.getInputImageUrl();
+            
+            if (!inputImageUrl || inputImageUrl === 'PENDING_EXECUTION') {
+                console.log('[ComfySketch] Still no image after retry');
+                alert('Please run the workflow first to generate the image, then click "Load Input Image" again.');
+                return;
+            }
+        }
+        
+        try {
+            console.log('[ComfySketch] Loading image from:', inputImageUrl);
+            const img = await new Promise((resolve, reject) => {
+                const image = new Image();
+                image.crossOrigin = 'anonymous';
+                image.onload = () => {
+                    console.log('[ComfySketch] Image loaded successfully:', image.width, 'x', image.height);
+                    resolve(image);
+                };
+                image.onerror = (e) => {
+                    console.error('[ComfySketch] Image load error:', e);
+                    reject(e);
+                };
+                image.src = inputImageUrl;
+            });
+            
+            // Draw onto active layer (or first layer)
+            const layer = this.getActiveLayer();
+            if (layer) {
+                const ctx = layer.canvas.getContext('2d');
+                ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+                
+                // Scale to fit canvas while preserving aspect ratio
+                const scale = Math.min(this.canvasWidth / img.width, this.canvasHeight / img.height);
+                const w = img.width * scale;
+                const h = img.height * scale;
+                const x = (this.canvasWidth - w) / 2;
+                const y = (this.canvasHeight - h) / 2;
+                
+                // Fill background first
+                ctx.fillStyle = this.getBackgroundColor();
+                ctx.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
+                ctx.drawImage(img, x, y, w, h);
+                
+                this.hasUserDrawing = true;
+                this.renderLayers();
+                this.layersPanel?.update();
+                this.saveToHistory();
+                this.saveCanvasData();
+                
+                console.log('[ComfySketch] Image loaded successfully into canvas');
+            }
+        } catch (e) {
+            console.error('[ComfySketch] Could not load input image:', e);
+            alert('Could not load input image. Make sure the workflow has been executed and the image is available.');
+        }
+    }
+    
+    getInputImageUrl() {
+        // Find the input_image input link on this node
+        const node = this.node;
+        if (!node.inputs) return null;
+        
+        const inputIndex = node.inputs.findIndex(inp => inp.name === 'input_image');
+        if (inputIndex === -1) return null;
+        
+        const link = node.inputs[inputIndex].link;
+        if (link == null) return null;
+        
+        // Get the connected output node via LiteGraph
+        const linkInfo = app.graph.links[link];
+        if (!linkInfo) return null;
+        
+        const sourceNode = app.graph.getNodeById(linkInfo.origin_id);
+        if (!sourceNode) return null;
+        
+        const outputSlot = linkInfo.origin_slot || 0;
+        
+        console.log('[ComfySketch] Checking source node:', {
+            type: sourceNode.comfyClass || sourceNode.type,
+            slot: outputSlot,
+            hasImgs: !!(sourceNode.imgs && sourceNode.imgs.length),
+            hasImages: !!(sourceNode.images && sourceNode.images.length),
+            widgets: sourceNode.widgets?.map(w => ({ name: w.name, hasValue: !!w.value })),
+            properties: sourceNode.properties,
+            outputs: sourceNode.outputs?.map(o => o.type)
+        });
+        
+        // Method 1: LoadImage node - get filename from widget
+        if (sourceNode.comfyClass === 'LoadImage' || sourceNode.type === 'LoadImage') {
+            const imageWidget = sourceNode.widgets?.find(w => w.name === 'image');
+            if (imageWidget?.value) {
+                const filename = imageWidget.value;
+                const subfolder = filename.includes('/') ? filename.split('/').slice(0, -1).join('/') : '';
+                const name = filename.includes('/') ? filename.split('/').pop() : filename;
+                let url = `/view?filename=${encodeURIComponent(name)}&type=input`;
+                if (subfolder) url += `&subfolder=${encodeURIComponent(subfolder)}`;
+                console.log('[ComfySketch] ✓ LoadImage URL:', url);
+                return url;
+            }
+        }
+        
+        // Method 2: Check imgs array (most common after execution)
+        if (sourceNode.imgs && sourceNode.imgs.length > 0) {
+            const imgSrc = sourceNode.imgs[outputSlot]?.src || sourceNode.imgs[0]?.src;
+            if (imgSrc) {
+                console.log('[ComfySketch] ✓ Found in imgs array:', imgSrc);
+                return imgSrc;
+            }
+        }
+        
+        // Method 3: Check images array (execution results)
+        if (sourceNode.images && sourceNode.images.length > 0) {
+            const imgInfo = sourceNode.images[0];
+            let url = `/view?filename=${encodeURIComponent(imgInfo.filename)}&type=${imgInfo.type || 'output'}`;
+            if (imgInfo.subfolder) url += `&subfolder=${encodeURIComponent(imgInfo.subfolder)}`;
+            console.log('[ComfySketch] ✓ Found in images array:', url);
+            return url;
+        }
+        
+        // Method 4: Check for preview/temp images in node properties
+        if (sourceNode.properties) {
+            for (const key in sourceNode.properties) {
+                const value = sourceNode.properties[key];
+                if (typeof value === 'string' && (value.startsWith('/view') || value.startsWith('data:image'))) {
+                    console.log('[ComfySketch] ✓ Found in properties:', value);
+                    return value;
+                }
+            }
+        }
+        
+        // Method 5: Try to construct URL from node's last execution
+        // ComfyUI stores execution results, try to access them
+        if (window.app && window.app.nodeOutputs) {
+            const nodeId = sourceNode.id;
+            const outputs = window.app.nodeOutputs[nodeId];
+            if (outputs && outputs.images && outputs.images.length > 0) {
+                const imgInfo = outputs.images[0];
+                let url = `/view?filename=${encodeURIComponent(imgInfo.filename)}&type=${imgInfo.type || 'temp'}`;
+                if (imgInfo.subfolder) url += `&subfolder=${encodeURIComponent(imgInfo.subfolder)}`;
+                console.log('[ComfySketch] ✓ Found in app.nodeOutputs:', url);
+                return url;
+            }
+        }
+        
+        // Method 6: Walk downstream from source node to find any node that captured
+        // the image (e.g. PreviewImage/SaveImage connected after VAEDecode).
+        // Also walk upstream from source node in case a LoadImage feeds into it.
+        {
+            const imageUrl = this._findImageInGraph(sourceNode, outputSlot);
+            if (imageUrl) {
+                console.log('[ComfySketch] ✓ Found via graph walk:', imageUrl);
+                return imageUrl;
+            }
+        }
+        
+        // Method 7: For IMAGE output nodes, allow button to appear but require execution
+        if (sourceNode.outputs && sourceNode.outputs[outputSlot]) {
+            const outputType = sourceNode.outputs[outputSlot].type;
+            if (outputType === 'IMAGE') {
+                console.log('[ComfySketch] ⚠ Node outputs IMAGE but no data found - needs execution');
+                return 'PENDING_EXECUTION';
+            }
+        }
+        
+        console.log('[ComfySketch] ✗ No image URL found');
+        return null;
+    }
+    
+    _findImageInGraph(sourceNode, outputSlot) {
+        // Walk downstream from sourceNode: find any node that has captured image data
+        // (PreviewImage, SaveImage, or any node with imgs/images populated)
+        const visited = new Set();
+        const queue = [];
+        
+        // Seed with all nodes connected to sourceNode's output slot
+        if (sourceNode.outputs && sourceNode.outputs[outputSlot]) {
+            const output = sourceNode.outputs[outputSlot];
+            if (output.links) {
+                for (const linkId of output.links) {
+                    const lInfo = app.graph.links[linkId];
+                    if (lInfo) {
+                        const targetNode = app.graph.getNodeById(lInfo.target_id);
+                        if (targetNode) queue.push(targetNode);
+                    }
+                }
+            }
+        }
+        
+        while (queue.length > 0) {
+            const n = queue.shift();
+            if (visited.has(n.id)) continue;
+            visited.add(n.id);
+            
+            // Check if this node has image data
+            if (n.imgs && n.imgs.length > 0 && n.imgs[0]?.src) {
+                return n.imgs[0].src;
+            }
+            if (n.images && n.images.length > 0) {
+                const imgInfo = n.images[0];
+                let url = `/view?filename=${encodeURIComponent(imgInfo.filename)}&type=${imgInfo.type || 'output'}`;
+                if (imgInfo.subfolder) url += `&subfolder=${encodeURIComponent(imgInfo.subfolder)}`;
+                return url;
+            }
+            if (window.app && window.app.nodeOutputs) {
+                const outputs = window.app.nodeOutputs[n.id];
+                if (outputs && outputs.images && outputs.images.length > 0) {
+                    const imgInfo = outputs.images[0];
+                    let url = `/view?filename=${encodeURIComponent(imgInfo.filename)}&type=${imgInfo.type || 'temp'}`;
+                    if (imgInfo.subfolder) url += `&subfolder=${encodeURIComponent(imgInfo.subfolder)}`;
+                    return url;
+                }
+            }
+            
+            // Continue walking downstream (only follow IMAGE-type outputs)
+            if (n.outputs) {
+                for (const out of n.outputs) {
+                    if (out.links) {
+                        for (const linkId of out.links) {
+                            const lInfo = app.graph.links[linkId];
+                            if (lInfo) {
+                                const targetNode = app.graph.getNodeById(lInfo.target_id);
+                                if (targetNode && !visited.has(targetNode.id)) queue.push(targetNode);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        return null;
+    }
+    
     openFullscreen() {
         this.isFullscreen = true;
         this.zoom = 1; this.panX = 0; this.panY = 0;
         if (this.layers.length === 0) this.addLayer(false);
+        
+        // Check if we should load from input image (only if canvas is blank/empty)
+        this.loadInputImageIfNeeded();
         
         this.fullscreenOverlay = document.createElement('div');
         this.fullscreenOverlay.style.cssText = `
@@ -2083,12 +3603,15 @@ class DrawingPad {
         this.canvasContainer.appendChild(this.displayCanvas);
         this.fullscreenOverlay.appendChild(this.canvasContainer);
         
-        // Brush cursor
+        // Brush cursor - dual outline for visibility on any background
         this.brushCursor = document.createElement('div');
         this.brushCursor.style.cssText = `
             position: fixed; pointer-events: none;
-            border: 2px solid rgba(0,0,0,0.5); border-radius: 50%;
+            border: 1.5px solid rgba(255,255,255,0.9);
+            outline: 1.5px solid rgba(0,0,0,0.7);
+            border-radius: 50%;
             transform: translate(-50%, -50%); z-index: 100002; display: none;
+            box-sizing: border-box;
         `;
         this.fullscreenOverlay.appendChild(this.brushCursor);
         
@@ -2101,19 +3624,19 @@ class DrawingPad {
         this.fullscreenOverlay.appendChild(this.topBar.getElement());
         
         this.toolbarPanel = new ToolbarPanel(this);
-        this.toolbarPanel.setPosition(this.savedPositions?.toolbar?.x ?? 20, this.savedPositions?.toolbar?.y ?? 60);
+        this.toolbarPanel.setPosition(this.savedPositions?.toolbar?.x ?? 20, this.savedPositions?.toolbar?.y ?? Math.round(window.innerHeight / 2 - 200));
         this.fullscreenOverlay.appendChild(this.toolbarPanel.getElement());
         
         this.colorPanel = new ColorWheelPanel(this);
-        this.colorPanel.setPosition(this.savedPositions?.color?.x ?? window.innerWidth - 160, this.savedPositions?.color?.y ?? 60);
+        this.colorPanel.setPosition(this.savedPositions?.color?.x ?? window.innerWidth - 175, this.savedPositions?.color?.y ?? Math.round(window.innerHeight / 2 - 80));
         this.fullscreenOverlay.appendChild(this.colorPanel.getElement());
         
         this.sizeWidget = new SizeOpacityWidget(this);
-        this.sizeWidget.setPosition(this.savedPositions?.size?.x ?? window.innerWidth / 2 - 35, this.savedPositions?.size?.y ?? window.innerHeight - 100);
+        this.sizeWidget.setPosition(this.savedPositions?.size?.x ?? Math.round(window.innerWidth / 2 - 35), this.savedPositions?.size?.y ?? window.innerHeight - 110);
         this.fullscreenOverlay.appendChild(this.sizeWidget.getElement());
         
         this.layersPanel = new LayersPanel(this);
-        this.layersPanel.setPosition(this.savedPositions?.layers?.x ?? window.innerWidth - 160, this.savedPositions?.layers?.y ?? 280);
+        this.layersPanel.setPosition(this.savedPositions?.layers?.x ?? window.innerWidth - 175, this.savedPositions?.layers?.y ?? 70);
         this.fullscreenOverlay.appendChild(this.layersPanel.getElement());
         this.layersPanel.update();
         
@@ -2141,10 +3664,20 @@ class DrawingPad {
         } else if (this.tool === 'pencil') {
             this.displayCanvas.style.cursor = 'crosshair';
         } else {
-            const cursors = { draw: 'none', line: 'crosshair', circle: 'crosshair', square: 'crosshair', fill: 'cell', erase: 'none' };
+            const cursors = { draw: 'none', line: 'crosshair', circle: 'crosshair', square: 'crosshair', fill: 'cell', erase: 'none', move: 'default',
+                'select-rect': 'crosshair', 'select-ellipse': 'crosshair', 'select-lasso': 'crosshair' };
             this.displayCanvas.style.cursor = cursors[this.tool] || 'crosshair';
         }
         this.updateBrushCursor();
+    }
+    
+    setPanelsInteractive(interactive) {
+        const val = interactive ? 'auto' : 'none';
+        this.topBar?.getElement() && (this.topBar.getElement().style.pointerEvents = val);
+        this.toolbarPanel?.getElement() && (this.toolbarPanel.getElement().style.pointerEvents = val);
+        this.colorPanel?.getElement() && (this.colorPanel.getElement().style.pointerEvents = val);
+        this.sizeWidget?.getElement() && (this.sizeWidget.getElement().style.pointerEvents = val);
+        this.layersPanel?.getElement() && (this.layersPanel.getElement().style.pointerEvents = val);
     }
     
     updateBrushCursor() {
@@ -2154,12 +3687,40 @@ class DrawingPad {
             this.brushCursor.style.width = `${size}px`;
             this.brushCursor.style.height = `${size}px`;
             this.brushCursor.style.display = 'block';
-            this.brushCursor.style.background = this.tool === 'erase'
-                ? 'rgba(255,255,255,0.3)'
-                : this.hexToRgba(this.color, this.opacity / 100 * 0.4);
-            this.brushCursor.style.borderColor = this.tool === 'erase' ? 'rgba(255,0,0,0.6)' : 'rgba(0,0,0,0.6)';
+            this.brushCursor.style.background = 'none';
+            if (this.tool === 'erase') {
+                this.brushCursor.style.border = '1.5px solid rgba(255,255,255,0.9)';
+                this.brushCursor.style.outline = '1.5px solid rgba(255,0,0,0.6)';
+            }
+            // Normal draw cursor adapts in onPointerMove via updateBrushCursorContrast
         } else {
             this.brushCursor.style.display = 'none';
+        }
+    }
+    
+    updateBrushCursorContrast(e) {
+        if (!this.brushCursor || !this.displayCanvas) return;
+        if (this.tool === 'erase') return; // erase always uses red/white
+        if (this.tool !== 'draw') return;
+        
+        // Sample the pixel under the cursor from the display canvas
+        const rect = this.displayCanvas.getBoundingClientRect();
+        const x = Math.floor((e.clientX - rect.left) * (this.canvasWidth / rect.width));
+        const y = Math.floor((e.clientY - rect.top) * (this.canvasHeight / rect.height));
+        
+        if (x < 0 || x >= this.canvasWidth || y < 0 || y >= this.canvasHeight) return;
+        
+        const ctx = this.displayCanvas.getContext('2d');
+        const pixel = ctx.getImageData(x, y, 1, 1).data;
+        const brightness = (pixel[0] * 299 + pixel[1] * 587 + pixel[2] * 114) / 1000;
+        
+        // Dark background → white cursor, light background → black cursor
+        if (brightness < 128) {
+            this.brushCursor.style.border = '1.5px solid rgba(255,255,255,0.9)';
+            this.brushCursor.style.outline = '1.5px solid rgba(0,0,0,0.4)';
+        } else {
+            this.brushCursor.style.border = '1.5px solid rgba(0,0,0,0.7)';
+            this.brushCursor.style.outline = '1.5px solid rgba(255,255,255,0.5)';
         }
     }
     
@@ -2248,7 +3809,43 @@ class DrawingPad {
         canvas.addEventListener('pointerdown', (e) => this.onPointerDown(e));
         canvas.addEventListener('pointermove', (e) => this.onPointerMove(e));
         canvas.addEventListener('pointerup', (e) => this.onPointerUp(e));
-        canvas.addEventListener('pointerleave', (e) => this.onPointerUp(e));
+        canvas.addEventListener('pointerleave', (e) => {
+            // Don't end drag on pointer leave — pointer capture handles it
+            if (this.isMoving && this.tool === 'move') return;
+            if (this.isDrawing && this.selectionDrag) return;
+            this.onPointerUp(e);
+        });
+        
+        // Handle pointer events outside canvas for transform handles
+        this.canvasContainer.addEventListener('pointerdown', (e) => {
+            if (e.target === canvas) return; // Already handled by canvas listener
+            if (this.tool !== 'move' || !this.transform) return;
+            
+            // Check if clicking on a transform handle in screen space
+            const screenPos = this.screenToCanvasPos(e.clientX, e.clientY);
+            const handleType = this.getTransformHandleAtPos(screenPos);
+            if (handleType) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.isMoving = true;
+                this.setPanelsInteractive(false);
+                canvas.setPointerCapture(e.pointerId);
+                
+                // Bake any existing anchor offset
+                this.transform.offsetX += (this.transform.anchorOffsetX || 0);
+                this.transform.offsetY += (this.transform.anchorOffsetY || 0);
+                this.transform.anchorOffsetX = 0;
+                this.transform.anchorOffsetY = 0;
+                
+                this.transformDrag = {
+                    type: handleType,
+                    startX: screenPos.x,
+                    startY: screenPos.y,
+                    startTransform: { ...this.transform },
+                    startAngle: Math.atan2(screenPos.y - (this.transform.pivotY + this.transform.offsetY), screenPos.x - (this.transform.pivotX + this.transform.offsetX)),
+                };
+            }
+        });
         
         // S + drag for brush size
         this.sizeAdjustMode = false;
@@ -2262,7 +3859,7 @@ class DrawingPad {
         this.opacityAdjustStart = null;
         this.opacityAdjustStartVal = 0;
         
-        document.addEventListener('keydown', (e) => {
+        this._sizeOpacityKeyDown = (e) => {
             if (e.key.toLowerCase() === 's' && !e.ctrlKey && !e.metaKey && e.target.tagName !== 'INPUT') {
                 this.sizeAdjustMode = true;
                 this.showSizeLabel();
@@ -2271,8 +3868,8 @@ class DrawingPad {
                 this.opacityAdjustMode = true;
                 this.showOpacityLabel();
             }
-        });
-        document.addEventListener('keyup', (e) => {
+        };
+        this._sizeOpacityKeyUp = (e) => {
             if (e.key.toLowerCase() === 's') {
                 this.sizeAdjustMode = false;
                 this.sizeAdjustStart = null;
@@ -2283,7 +3880,9 @@ class DrawingPad {
                 this.opacityAdjustStart = null;
                 this.hideOpacityLabelDelayed();
             }
-        });
+        };
+        document.addEventListener('keydown', this._sizeOpacityKeyDown);
+        document.addEventListener('keyup', this._sizeOpacityKeyUp);
         
         this.canvasContainer.addEventListener('mousedown', (e) => {
             if (this.sizeAdjustMode && e.button === 0) {
@@ -2314,6 +3913,7 @@ class DrawingPad {
                 this.brushCursor.style.left = `${e.clientX}px`;
                 this.brushCursor.style.top = `${e.clientY}px`;
                 this.brushCursor.style.display = 'block';
+                this.updateBrushCursorContrast(e);
             } else {
                 this.brushCursor.style.display = 'none';
             }
@@ -2357,6 +3957,14 @@ class DrawingPad {
         };
     }
     
+    screenToCanvasPos(clientX, clientY) {
+        const rect = this.displayCanvas.getBoundingClientRect();
+        return {
+            x: (clientX - rect.left) * (this.canvasWidth / rect.width),
+            y: (clientY - rect.top) * (this.canvasHeight / rect.height)
+        };
+    }
+    
     onPointerDown(e) {
         if (e.button === 1) return;
         if (this.sizeAdjustMode) return;
@@ -2368,7 +3976,130 @@ class DrawingPad {
         if (this.tool === 'eyedropper') { this.pickColor(pos); return; }
         if (this.tool === 'fill') { this.floodFill(pos); return; }
         
+        // Selection tools
+        if (this.tool === 'select-rect' || this.tool === 'select-ellipse' || this.tool === 'select-lasso') {
+            this.clearSelection();
+            this.isDrawing = true;
+            this.selectionDrag = { startX: pos.x, startY: pos.y };
+            this.setPanelsInteractive(false);
+            this.displayCanvas.setPointerCapture(e.pointerId);
+            if (this.tool === 'select-lasso') {
+                this.lassoPoints = [{ x: pos.x, y: pos.y }];
+            }
+            return;
+        }
+        
+        // Move/Transform tool
+        if (this.tool === 'move') {
+            const layer = this.getActiveLayer();
+            if (!layer) return;
+            
+            // If transform is active, check handles
+            if (this.transform) {
+                const handleType = this.getTransformHandleAtPos(pos);
+                if (handleType) {
+                    // Bake any existing anchor offset into the main offset before starting new drag
+                    this.transform.offsetX += (this.transform.anchorOffsetX || 0);
+                    this.transform.offsetY += (this.transform.anchorOffsetY || 0);
+                    this.transform.anchorOffsetX = 0;
+                    this.transform.anchorOffsetY = 0;
+                    
+                    this.isMoving = true;
+                    this.setPanelsInteractive(false);
+                    this.displayCanvas.setPointerCapture(e.pointerId);
+                    this.transformDrag = {
+                        type: handleType,
+                        startX: pos.x,
+                        startY: pos.y,
+                        startTransform: { ...this.transform },
+                        startAngle: Math.atan2(pos.y - (this.transform.pivotY + this.transform.offsetY), pos.x - (this.transform.pivotX + this.transform.offsetX)),
+                    };
+                    return;
+                } else {
+                    // Clicked outside — commit current transform and start fresh
+                    this.commitTransform();
+                    // Check if there's a selection or content to start a new transform
+                    if (this.selection) {
+                        // Selection exists - transform it
+                        this.initTransform();
+                        if (this.transform) {
+                            const handleType = this.getTransformHandleAtPos(pos);
+                            if (handleType) {
+                                this.isMoving = true;
+                                this.setPanelsInteractive(false);
+                                this.displayCanvas.setPointerCapture(e.pointerId);
+                                this.transformDrag = {
+                                    type: handleType,
+                                    startX: pos.x,
+                                    startY: pos.y,
+                                    startTransform: { ...this.transform },
+                                };
+                            }
+                        }
+                    } else {
+                        // No selection - check for content bounds
+                        const newBounds = this.getContentBounds(layer.canvas);
+                        if (newBounds && this.isPointInBounds(pos, newBounds)) {
+                            this.initTransform();
+                            this.isMoving = true;
+                            this.setPanelsInteractive(false);
+                            this.displayCanvas.setPointerCapture(e.pointerId);
+                            this.transformDrag = {
+                                type: 'move',
+                                startX: pos.x,
+                                startY: pos.y,
+                                startTransform: { ...this.transform },
+                            };
+                        }
+                    }
+                    return;
+                }
+            }
+            
+            // No active transform — initialize one
+            // Priority: selection first, then content bounds
+            if (this.selection) {
+                // Transform the selection
+                this.initTransform();
+                if (this.transform) {
+                    const handleType = this.getTransformHandleAtPos(pos);
+                    if (handleType) {
+                        this.isMoving = true;
+                        this.setPanelsInteractive(false);
+                        this.displayCanvas.setPointerCapture(e.pointerId);
+                        this.transformDrag = {
+                            type: handleType,
+                            startX: pos.x,
+                            startY: pos.y,
+                            startTransform: { ...this.transform },
+                            startAngle: Math.atan2(pos.y - (this.transform.pivotY + this.transform.offsetY), pos.x - (this.transform.pivotX + this.transform.offsetX)),
+                        };
+                    }
+                }
+            } else {
+                // No selection - try to init transform on content
+                this.initTransform();
+                if (this.transform) {
+                    const handleType = this.getTransformHandleAtPos(pos);
+                    if (handleType) {
+                        this.isMoving = true;
+                        this.setPanelsInteractive(false);
+                        this.displayCanvas.setPointerCapture(e.pointerId);
+                        this.transformDrag = {
+                            type: handleType,
+                            startX: pos.x,
+                            startY: pos.y,
+                            startTransform: { ...this.transform },
+                            startAngle: Math.atan2(pos.y - (this.transform.pivotY + this.transform.offsetY), pos.x - (this.transform.pivotX + this.transform.offsetX)),
+                        };
+                    }
+                }
+            }
+            return;
+        }
+        
         this.isDrawing = true;
+        this.setPanelsInteractive(false);
         this.lastPoint = pos;
         this.lastPressure = e.pressure || 0.5;
         this.strokePoints = [{ ...pos, pressure: this.lastPressure }];
@@ -2393,6 +4124,110 @@ class DrawingPad {
     }
     
     onPointerMove(e) {
+        // Always update brush cursor position and contrast during draw/erase
+        if (this.brushCursor && (this.tool === 'draw' || this.tool === 'erase')) {
+            this.brushCursor.style.left = `${e.clientX}px`;
+            this.brushCursor.style.top = `${e.clientY}px`;
+            this.updateBrushCursorContrast(e);
+        }
+        
+        // Handle selection tool dragging
+        if (this.isDrawing && this.selectionDrag && (this.tool === 'select-rect' || this.tool === 'select-ellipse' || this.tool === 'select-lasso')) {
+            const pos = this.getCanvasPos(e);
+            if (this.tool === 'select-lasso') {
+                this.lassoPoints.push({ x: pos.x, y: pos.y });
+                this.drawLassoPreview(this.lassoPoints);
+            } else {
+                const type = this.tool === 'select-rect' ? 'rect' : 'ellipse';
+                this.drawSelectionPreview(
+                    { x: this.selectionDrag.startX, y: this.selectionDrag.startY },
+                    pos, type
+                );
+            }
+            return;
+        }
+        
+        // Handle transform tool dragging
+        if (this.isMoving && this.tool === 'move' && this.transformDrag && this.transform) {
+            const pos = this.getCanvasPos(e);
+            const dx = pos.x - this.transformDrag.startX;
+            const dy = pos.y - this.transformDrag.startY;
+            const st = this.transformDrag.startTransform;
+            const type = this.transformDrag.type;
+            
+            // Track last pointer position for edge auto-scale
+            this.lastScalePointerEvent = e;
+            
+            if (type === 'move') {
+                this.transform.offsetX = st.offsetX + dx;
+                this.transform.offsetY = st.offsetY + dy;
+            } else if (type === 'rotate') {
+                const pivotX = this.transform.pivotX + this.transform.offsetX;
+                const pivotY = this.transform.pivotY + this.transform.offsetY;
+                const currentAngle = Math.atan2(pos.y - pivotY, pos.x - pivotX);
+                let deltaAngle = currentAngle - this.transformDrag.startAngle;
+                // Snap to 15° increments when shift is held
+                if (e.shiftKey) {
+                    const snap = Math.PI / 12;
+                    const totalAngle = st.rotation + deltaAngle;
+                    deltaAngle = Math.round(totalAngle / snap) * snap - st.rotation;
+                }
+                this.transform.rotation = st.rotation + deltaAngle;
+            } else if (type.startsWith('scale-')) {
+                this.applyScaleDrag(dx, dy, e.shiftKey);
+                
+                // Start edge auto-scale if pointer is near viewport edge
+                const edgeMargin = 20;
+                const nearEdge = e.clientX < edgeMargin || e.clientX > window.innerWidth - edgeMargin ||
+                                 e.clientY < edgeMargin || e.clientY > window.innerHeight - edgeMargin;
+                
+                if (nearEdge && !this.edgeScaleInterval) {
+                    this.edgeScaleInterval = setInterval(() => {
+                        if (!this.isMoving || !this.transformDrag || !this.transform) {
+                            this.stopEdgeScale();
+                            return;
+                        }
+                        const handle = this.transformDrag.type.replace('scale-', '');
+                        const speed = 2; // pixels per tick in canvas space
+                        let extraDx = 0, extraDy = 0;
+                        
+                        const ev = this.lastScalePointerEvent;
+                        if (!ev) return;
+                        
+                        if (ev.clientX < edgeMargin) extraDx = -speed;
+                        else if (ev.clientX > window.innerWidth - edgeMargin) extraDx = speed;
+                        if (ev.clientY < edgeMargin) extraDy = -speed;
+                        else if (ev.clientY > window.innerHeight - edgeMargin) extraDy = speed;
+                        
+                        // Accumulate extra offset into the drag start to extend range
+                        this.transformDrag.edgeAccumX = (this.transformDrag.edgeAccumX || 0) + extraDx;
+                        this.transformDrag.edgeAccumY = (this.transformDrag.edgeAccumY || 0) + extraDy;
+                        
+                        const pos2 = this.getCanvasPos(ev);
+                        const totalDx = pos2.x - this.transformDrag.startX + this.transformDrag.edgeAccumX;
+                        const totalDy = pos2.y - this.transformDrag.startY + this.transformDrag.edgeAccumY;
+                        
+                        this.applyScaleDrag(totalDx, totalDy, ev.shiftKey);
+                        this.applyTransformPreview();
+                    }, 16);
+                } else if (!nearEdge && this.edgeScaleInterval) {
+                    this.stopEdgeScale();
+                }
+            }
+            
+            this.applyTransformPreview();
+            return;
+        }
+        
+        // Update cursor when hovering over transform handles
+        if (this.tool === 'move' && this.transform && !this.isMoving) {
+            const pos = this.getCanvasPos(e);
+            const handleType = this.getTransformHandleAtPos(pos);
+            if (this.displayCanvas) {
+                this.displayCanvas.style.cursor = this.getTransformCursor(handleType);
+            }
+        }
+        
         if (!this.isDrawing) return;
         const pos = this.getCanvasPos(e);
         const pressure = e.pressure || 0.5;
@@ -2414,6 +4249,43 @@ class DrawingPad {
     }
     
     onPointerUp(e) {
+        // Handle selection tool release
+        if (this.isDrawing && this.selectionDrag && (this.tool === 'select-rect' || this.tool === 'select-ellipse' || this.tool === 'select-lasso')) {
+            this.isDrawing = false;
+            this.setPanelsInteractive(true);
+            if (e && this.displayCanvas) {
+                try { this.displayCanvas.releasePointerCapture(e.pointerId); } catch (_) {}
+            }
+            if (this.tool === 'select-lasso') {
+                this.finalizeSelection('lasso', null, null, this.lassoPoints);
+                this.lassoPoints = null;
+            } else {
+                const pos = e ? this.getCanvasPos(e) : { x: this.selectionDrag.startX, y: this.selectionDrag.startY };
+                const type = this.tool === 'select-rect' ? 'rect' : 'ellipse';
+                this.finalizeSelection(type,
+                    { x: this.selectionDrag.startX, y: this.selectionDrag.startY },
+                    pos
+                );
+            }
+            this.selectionDrag = null;
+            return;
+        }
+        
+        // Handle transform tool release
+        if (this.isMoving && this.tool === 'move') {
+            this.isMoving = false;
+            this.transformDrag = null;
+            this.lastScalePointerEvent = null;
+            this.stopEdgeScale();
+            if (e && this.displayCanvas) {
+                try { this.displayCanvas.releasePointerCapture(e.pointerId); } catch (_) {}
+            }
+            this.setPanelsInteractive(true);
+            // Don't commit — keep handles visible so user can continue adjusting
+            // Transform is committed when: clicking outside, switching tools, pressing Enter
+            return;
+        }
+        
         if (!this.isDrawing) return;
         if (e && (this.tool === 'line' || this.tool === 'circle' || this.tool === 'square')) {
             const pos = this.getCanvasPos(e);
@@ -2429,17 +4301,21 @@ class DrawingPad {
             const layer = this.getActiveLayer();
             if (layer) {
                 const ctx = layer.canvas.getContext('2d');
+                if (this.selection) { ctx.save(); ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero'); }
                 ctx.globalAlpha = this.opacity / 100;
                 ctx.drawImage(this.strokeBuffer, 0, 0);
                 ctx.globalAlpha = 1;
+                if (this.selection) { ctx.restore(); }
             }
             this.strokeBuffer = null;
             this.strokeCtx = null;
         }
         
         this.isDrawing = false;
+        this.setPanelsInteractive(true);
         this.lastPoint = null;
         this.strokePoints = [];
+        this.hasUserDrawing = true;
         this.renderLayers();
         this.saveToHistory();
         this.layersPanel?.update();
@@ -2468,6 +4344,9 @@ class DrawingPad {
         
         if (!this.strokeBuffer) ctx.globalAlpha = this.opacity / 100;
         
+        // Apply selection clip
+        if (this.selection) { ctx.save(); ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero'); }
+        
         this._drawDotAt(ctx, pos.x, pos.y, size);
         
         if (this.mirrorDrawH) {
@@ -2480,6 +4359,7 @@ class DrawingPad {
             this._drawDotAt(ctx, this.canvasWidth - pos.x, this.canvasHeight - pos.y, size);
         }
         
+        if (this.selection) { ctx.restore(); }
         if (!this.strokeBuffer) ctx.globalAlpha = 1;
     }
     
@@ -2523,6 +4403,9 @@ class DrawingPad {
         
         if (!this.strokeBuffer) ctx.globalAlpha = this.opacity / 100;
         
+        // Apply selection clip
+        if (this.selection) { ctx.save(); ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero'); }
+        
         for (let i = 0; i <= steps; i++) {
             const t = i / steps;
             const x = from.x + (to.x - from.x) * t;
@@ -2544,6 +4427,7 @@ class DrawingPad {
                 this._drawDotAt(ctx, this.canvasWidth - x, this.canvasHeight - y, size);
             }
         }
+        if (this.selection) { ctx.restore(); }
         if (!this.strokeBuffer) ctx.globalAlpha = 1;
     }
     
@@ -2651,10 +4535,12 @@ class DrawingPad {
         if (!layer) return;
         const ctx = layer.canvas.getContext('2d');
         ctx.globalAlpha = this.opacity / 100;
+        if (this.selection) { ctx.save(); ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero'); }
         ctx.strokeStyle = this.color;
         ctx.lineWidth = this.brushSize;
         ctx.lineCap = 'round';
         ctx.beginPath(); ctx.moveTo(from.x, from.y); ctx.lineTo(to.x, to.y); ctx.stroke();
+        if (this.selection) { ctx.restore(); }
         ctx.globalAlpha = 1;
     }
     
@@ -2663,6 +4549,7 @@ class DrawingPad {
         if (!layer) return;
         const ctx = layer.canvas.getContext('2d');
         ctx.globalAlpha = this.opacity / 100;
+        if (this.selection) { ctx.save(); ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero'); }
         ctx.strokeStyle = this.color;
         ctx.lineWidth = this.brushSize;
         ctx.beginPath();
@@ -2674,6 +4561,7 @@ class DrawingPad {
         }
         ctx.ellipse(center.x, center.y, rx, ry, 0, 0, Math.PI * 2);
         ctx.stroke();
+        if (this.selection) { ctx.restore(); }
         ctx.globalAlpha = 1;
     }
     
@@ -2682,6 +4570,7 @@ class DrawingPad {
         if (!layer) return;
         const ctx = layer.canvas.getContext('2d');
         ctx.globalAlpha = this.opacity / 100;
+        if (this.selection) { ctx.save(); ctx.clip(this.selection.path, this.selection.useEvenOdd ? 'evenodd' : 'nonzero'); }
         ctx.strokeStyle = this.color;
         ctx.lineWidth = this.brushSize;
         let w = end.x - start.x;
@@ -2692,6 +4581,7 @@ class DrawingPad {
             h = h < 0 ? -size : size;
         }
         ctx.strokeRect(start.x, start.y, w, h);
+        if (this.selection) { ctx.restore(); }
         ctx.globalAlpha = 1;
     }
     
@@ -2709,14 +4599,26 @@ class DrawingPad {
         const fillB = parseInt(this.color.slice(5, 7), 16);
         const fillA = Math.round((this.opacity / 100) * 255);
         if (startR === fillR && startG === fillG && startB === fillB && startA === fillA) return;
-        const tolerance = 32;
+        
+        const tolerance = this.fillTolerance || 32;
         const stack = [[startX, startY]];
         const visited = new Set();
         const matchesStart = (idx) => Math.abs(data[idx] - startR) <= tolerance && Math.abs(data[idx + 1] - startG) <= tolerance && Math.abs(data[idx + 2] - startB) <= tolerance && Math.abs(data[idx + 3] - startA) <= tolerance;
+        
+        // If there's a selection, check if point is inside selection path
+        const isInSelection = (x, y) => {
+            if (!this.selection) return true;
+            return ctx.isPointInPath(this.selection.path, x, y, this.selection.useEvenOdd ? 'evenodd' : 'nonzero');
+        };
+        
         while (stack.length > 0) {
             const [x, y] = stack.pop();
             const key = `${x},${y}`;
             if (visited.has(key) || x < 0 || x >= this.canvasWidth || y < 0 || y >= this.canvasHeight) continue;
+            
+            // Check if pixel is inside selection (if selection exists)
+            if (!isInSelection(x, y)) continue;
+            
             const idx = (y * this.canvasWidth + x) * 4;
             if (!matchesStart(idx)) continue;
             visited.add(key);
@@ -2739,10 +4641,58 @@ class DrawingPad {
     
     handleKeyboard(e) {
         if (e.target.tagName === 'INPUT') return;
+        
+        // Stop all key events from reaching ComfyUI/LiteGraph while fullscreen editor is open
+        e.stopPropagation();
+        
+        // Selection shortcuts (before transform keys)
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'd') {
+            e.preventDefault(); this.clearSelection(); return;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'a') {
+            e.preventDefault(); this.selectAll(); return;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'i') {
+            e.preventDefault(); this.invertSelection(); return;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'j') {
+            e.preventDefault(); this.cutSelectionToNewLayer(); return;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'j') {
+            e.preventDefault(); this.copySelectionToNewLayer(); return;
+        }
+        if (e.key === 'Delete' || e.key === 'Backspace') {
+            if (this.selection) { e.preventDefault(); e.stopPropagation(); this.deleteSelectionContent(); return; }
+        }
+        if (e.key === 'Escape' && this.selection && !this.transform) {
+            e.preventDefault(); this.clearSelection(); return;
+        }
+        
+        // Transform-specific keys
+        if (this.transform) {
+            if (e.key === 'Enter') { e.preventDefault(); this.commitTransform(); return; }
+            if (e.key === 'Escape') { e.preventDefault(); this.cancelTransform(); return; }
+        }
+        
+        // Commit transform when switching to another tool
+        const toolKeys = ['b','v','p','l','c','g','e','i','r','m','f'];
+        if (toolKeys.includes(e.key.toLowerCase()) && this.transform) {
+            this.commitTransform();
+        }
+        
         switch(e.key.toLowerCase()) {
             case 'escape': this.closeFullscreen(); break;
             case ' ': e.preventDefault(); this.toggleUI(); break;
             case 'b': this.tool = 'draw'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
+            case 'v': 
+                this.tool = 'move'; 
+                this.toolbarPanel?.updateToolButtons(); 
+                this.updateCursor(); 
+                // If there's a selection and no active transform, automatically init transform on it
+                if (this.selection && !this.transform) {
+                    this.initTransform();
+                }
+                break;
             case 'p': this.tool = 'pencil'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
             case 'l': this.tool = 'line'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
             case 'c': this.tool = 'circle'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
@@ -2750,13 +4700,33 @@ class DrawingPad {
             case 'e': this.tool = 'erase'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
             case 'i': this.tool = 'eyedropper'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
             case 'r': this.tool = 'square'; this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
+            case 'm':
+                if (e.shiftKey) {
+                    this.tool = 'select-ellipse';
+                    this.selectSubTool = 'select-ellipse';
+                } else {
+                    this.tool = 'select-rect';
+                    this.selectSubTool = 'select-rect';
+                }
+                this.toolbarPanel?.updateSelectBtnIcon();
+                this.toolbarPanel?.updateToolButtons(); this.updateCursor(); break;
+            case 'f':
+                if (!e.ctrlKey && !e.metaKey) {
+                    this.tool = 'select-lasso';
+                    this.selectSubTool = 'select-lasso';
+                    this.toolbarPanel?.updateSelectBtnIcon();
+                    this.toolbarPanel?.updateToolButtons(); this.updateCursor();
+                }
+                break;
             case 'x':
                 const temp = this.color; this.color = this.bgColor; this.bgColor = temp;
                 this.colorPanel?.setFromHex(this.color); this.colorPanel?.updateFgBg();
                 break;
             case 'd':
-                this.color = '#FFFFFF'; this.bgColor = '#000000';
-                this.colorPanel?.setFromHex(this.color); this.colorPanel?.updateFgBg();
+                if (!e.ctrlKey && !e.metaKey) {
+                    this.color = '#FFFFFF'; this.bgColor = '#000000';
+                    this.colorPanel?.setFromHex(this.color); this.colorPanel?.updateFgBg();
+                }
                 break;
             case 'z': if (e.ctrlKey || e.metaKey) { e.preventDefault(); this.undo(); } break;
             case 'y': if (e.ctrlKey || e.metaKey) { e.preventDefault(); this.redo(); } break;
@@ -2793,8 +4763,22 @@ class DrawingPad {
     closeFullscreen() {
         if (!this.fullscreenOverlay) return;
         
+        // Commit any active transform
+        if (this.transform) this.commitTransform();
+        
+        // Clear selection before saving (stop marching ants, remove overlay)
+        if (this.selection) {
+            this.selection = null;
+            this.selectionDrag = null;
+            this.stopMarchingAnts();
+            this.removeSelectionOverlay();
+        }
+        
         this.savedPositions = {
-            topBar: this.topBar ? { x: parseInt(this.topBar.getElement().style.left), y: parseInt(this.topBar.getElement().style.top) } : null,
+            topBar: this.topBar ? (() => {
+                const rect = this.topBar.getElement().getBoundingClientRect();
+                return { x: Math.round(rect.left), y: Math.round(rect.top) };
+            })() : null,
             toolbar: this.toolbarPanel ? { x: parseInt(this.toolbarPanel.getElement().style.left), y: parseInt(this.toolbarPanel.getElement().style.top) } : null,
             color: this.colorPanel ? { x: parseInt(this.colorPanel.getElement().style.left), y: parseInt(this.colorPanel.getElement().style.top) } : null,
             size: this.sizeWidget ? { x: parseInt(this.sizeWidget.getElement().style.left), y: parseInt(this.sizeWidget.getElement().style.top) } : null,
@@ -2802,11 +4786,60 @@ class DrawingPad {
         };
         
         this.isFullscreen = false;
-        this.renderLayers();
-        this.saveCanvasData();
+        this.removeHandleOverlay();
+        
+        // Render final composite directly to previewCanvas (bypass displayCanvas)
+        // This ensures the preview is always correct even if displayCanvas is in a weird state
+        try {
+            // Cancel any pending throttled save
+            if (this._saveTimeout) clearTimeout(this._saveTimeout);
+            
+            const pctx = this.previewCanvas.getContext('2d');
+            pctx.fillStyle = this.getBackgroundColor();
+            pctx.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
+            for (let i = 0; i < this.layers.length; i++) {
+                const layer = this.layers[i];
+                if (!layer.visible) continue;
+                pctx.globalAlpha = layer.opacity;
+                pctx.drawImage(layer.canvas, 0, 0);
+            }
+            pctx.globalAlpha = 1;
+            
+            // Save to widget
+            if (this.canvasDataWidget) {
+                this.canvasDataWidget.value = this.previewCanvas.toDataURL('image/jpeg', 0.85);
+            }
+            this.hasUserDrawing = true;
+            this.node.setDirtyCanvas(true, true);
+        } catch (e) {
+            console.error('[ComfySketch] Error saving canvas on close:', e);
+        }
+        
         document.removeEventListener('keydown', this.keyHandler);
         document.removeEventListener('mousemove', this.panMoveHandler);
         document.removeEventListener('mouseup', this.panUpHandler);
+        
+        // Remove S/O size/opacity key handlers
+        if (this._sizeOpacityKeyDown) document.removeEventListener('keydown', this._sizeOpacityKeyDown);
+        if (this._sizeOpacityKeyUp) document.removeEventListener('keyup', this._sizeOpacityKeyUp);
+        
+        // Destroy panels/widgets to remove their global event listeners
+        if (this.topBar) this.topBar.destroy();
+        if (this.toolbarPanel) this.toolbarPanel.destroy();
+        if (this.colorPanel) this.colorPanel.destroy();
+        if (this.sizeWidget) this.sizeWidget.destroy();
+        if (this.layersPanel) this.layersPanel.destroy();
+        
+        // Clean up S/O drag labels appended to document.body
+        if (this.sizeLabel && this.sizeLabel.parentNode) {
+            this.sizeLabel.parentNode.removeChild(this.sizeLabel);
+            this.sizeLabel = null;
+        }
+        if (this.opacityLabel && this.opacityLabel.parentNode) {
+            this.opacityLabel.parentNode.removeChild(this.opacityLabel);
+            this.opacityLabel = null;
+        }
+        
         document.body.removeChild(this.fullscreenOverlay);
         this.fullscreenOverlay = null;
         this.displayCanvas = null;
@@ -2874,3 +4907,17 @@ app.registerExtension({
 });
 
 console.log("ComfySketch loaded!");
+
+
+
+
+
+
+
+
+            
+          
+                
+               
+                
+                

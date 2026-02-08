@@ -33,6 +33,7 @@ class ComfySketchNode:
         "1024 x 1024",
         "1080 x 1920",
         "1920 x 1080",
+        "From Input Image",
         "Custom",
     ]
     
@@ -45,6 +46,9 @@ class ComfySketchNode:
                 "custom_height": ("INT", {"default": 768, "min": 64, "max": 4096, "step": 64}),
                 "background_color": (["white", "black", "gray"], {"default": "white"}),
                 "canvas_data": ("STRING", {"default": "", "multiline": True}),
+            },
+            "optional": {
+                "input_image": ("IMAGE",),
             },
         }
     
@@ -59,6 +63,7 @@ class ComfySketchNode:
         custom_height: int,
         background_color: str,
         canvas_data: str,
+        input_image: torch.Tensor = None,
     ):
         # Parse size
         size_map = {
@@ -74,6 +79,9 @@ class ComfySketchNode:
         
         if preset_size == "Custom":
             width, height = custom_width, custom_height
+        elif preset_size == "From Input Image" and input_image is not None:
+            # input_image shape: (B, H, W, C)
+            height, width = input_image.shape[1], input_image.shape[2]
         else:
             width, height = size_map.get(preset_size, (1920, 1080))
         
@@ -94,6 +102,22 @@ class ComfySketchNode:
                 return (image_tensor,)
             except Exception as e:
                 print(f"[ComfySketch] Error decoding canvas: {e}")
+        
+        # If input_image is connected and no canvas data, use the input image
+        if input_image is not None:
+            # input_image shape: (B, H, W, C) float32 0-1
+            image_np = input_image[0].cpu().numpy()
+            image_np = (image_np * 255).clip(0, 255).astype(np.uint8)
+            image = Image.fromarray(image_np, 'RGB')
+            
+            # Resize if needed
+            if image.size != (width, height):
+                image = image.resize((width, height), Image.Resampling.LANCZOS)
+            
+            image_np = np.array(image).astype(np.float32) / 255.0
+            image_tensor = torch.from_numpy(image_np).unsqueeze(0)
+            
+            return (image_tensor,)
         
         # Return blank canvas
         bg_colors = {

@@ -2,19 +2,7 @@
 
 A drawing and sketching node for ComfyUI with layers, multiple brush types, and a focused, professional interface.
 
-
-![ComfySketch screenshot](images/screen1.png)
-![ComfySketch screenshot](images/screen2.png)
-![ComfySketch screenshot](images/screen3.png)
-
-
  **Status:** Active development. Feedback and issues are welcome.
- 
- ## ❤️ Support this project
-
-If you find this project useful, you can support its development here:  
-👉https://mexesmith.gumroad.com/l/kzwqlr
-## Support
 
 > Parts of this project were developed with the help of AI-assisted tools and then refined manually.
 
@@ -176,6 +164,10 @@ Choose the initial canvas background:
 - **White** - Good for dark sketches
 - **Gray** - Neutral middle tone
 
+
+
+
+
 ComfyUI is a separate project. This tool is not affiliated with or endorsed by the ComfyUI developers.
 
 ---
@@ -186,12 +178,8 @@ ComfyUI is a separate project. This tool is not affiliated with or endorsed by t
 
 MIT License.
 
-
-
+## Support
 
 This is a free and open-source ComfyUI node.  
 If it saves you time or fits into your workflow, you can optionally support the project via a tip on Gumroad.  
 The tool will remain fully usable without payment.
-
-
-
