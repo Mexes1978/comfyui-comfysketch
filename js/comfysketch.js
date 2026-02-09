@@ -2587,17 +2587,16 @@ class DrawingPad {
             return toScreen(cp.x, cp.y);
         });
         
-        // Bounding box (dashed)
+        // Bounding box (solid)
         const boxPath = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
         boxPath.setAttribute('points', transformed.map(p => `${p.x},${p.y}`).join(' '));
         boxPath.setAttribute('fill', 'none');
         boxPath.setAttribute('stroke', '#29f');
-        boxPath.setAttribute('stroke-width', '1.5');
-        boxPath.setAttribute('stroke-dasharray', '4,4');
+        boxPath.setAttribute('stroke-width', '1');
         svg.appendChild(boxPath);
         
         // Corner handles
-        const handleSize = 12;
+        const handleSize = 8;
         transformed.forEach(p => {
             const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
             r.setAttribute('x', p.x - handleSize / 2);
@@ -2606,7 +2605,7 @@ class DrawingPad {
             r.setAttribute('height', handleSize);
             r.setAttribute('fill', '#fff');
             r.setAttribute('stroke', '#29f');
-            r.setAttribute('stroke-width', '1.5');
+            r.setAttribute('stroke-width', '1');
             svg.appendChild(r);
         });
         
@@ -2623,7 +2622,7 @@ class DrawingPad {
             r.setAttribute('height', edgeHandleSize);
             r.setAttribute('fill', '#fff');
             r.setAttribute('stroke', '#29f');
-            r.setAttribute('stroke-width', '1.5');
+            r.setAttribute('stroke-width', '1');
             svg.appendChild(r);
         }
         
@@ -2637,7 +2636,7 @@ class DrawingPad {
         const len = Math.hypot(dx, dy) || 1;
         const nx = -dy / len;
         const ny = dx / len;
-        const rotHandleDist = 25;
+        const rotHandleDist = 20;
         const rotHandle = {
             x: topMid.x + nx * rotHandleDist,
             y: topMid.y + ny * rotHandleDist,
@@ -2657,10 +2656,10 @@ class DrawingPad {
         const rotCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         rotCircle.setAttribute('cx', rotHandle.x);
         rotCircle.setAttribute('cy', rotHandle.y);
-        rotCircle.setAttribute('r', '6');
+        rotCircle.setAttribute('r', '5');
         rotCircle.setAttribute('fill', '#fff');
         rotCircle.setAttribute('stroke', '#29f');
-        rotCircle.setAttribute('stroke-width', '1.5');
+        rotCircle.setAttribute('stroke-width', '1');
         svg.appendChild(rotCircle);
         
         // Small arc inside rotation handle
@@ -3734,12 +3733,20 @@ class DrawingPad {
     updateCanvasTransform() {
         if (!this.displayCanvas) return;
         this.displayCanvas.style.transform = `scale(${this.zoom}) translate(${this.panX}px, ${this.panY}px)`;
+        // Redraw transform handles if move tool is active
+        if (this.tool === 'move' && this.transform) {
+            this.drawTransformHandles();
+        }
     }
     
     adjustZoom(delta) {
         this.zoom = Math.max(0.25, Math.min(8, this.zoom + delta));
         this.updateCanvasTransform();
         this.updateBrushCursor();
+        // Redraw transform handles if move tool is active
+        if (this.tool === 'move' && this.transform) {
+            this.drawTransformHandles();
+        }
     }
     
     fitToView() {
@@ -3814,6 +3821,14 @@ class DrawingPad {
             if (this.isMoving && this.tool === 'move') return;
             if (this.isDrawing && this.selectionDrag) return;
             this.onPointerUp(e);
+        });
+        
+        // Double-click to commit transform
+        canvas.addEventListener('dblclick', (e) => {
+            if (this.tool === 'move' && this.transform) {
+                e.preventDefault();
+                this.commitTransform();
+            }
         });
         
         // Handle pointer events outside canvas for transform handles
@@ -4016,42 +4031,8 @@ class DrawingPad {
                     };
                     return;
                 } else {
-                    // Clicked outside — commit current transform and start fresh
-                    this.commitTransform();
-                    // Check if there's a selection or content to start a new transform
-                    if (this.selection) {
-                        // Selection exists - transform it
-                        this.initTransform();
-                        if (this.transform) {
-                            const handleType = this.getTransformHandleAtPos(pos);
-                            if (handleType) {
-                                this.isMoving = true;
-                                this.setPanelsInteractive(false);
-                                this.displayCanvas.setPointerCapture(e.pointerId);
-                                this.transformDrag = {
-                                    type: handleType,
-                                    startX: pos.x,
-                                    startY: pos.y,
-                                    startTransform: { ...this.transform },
-                                };
-                            }
-                        }
-                    } else {
-                        // No selection - check for content bounds
-                        const newBounds = this.getContentBounds(layer.canvas);
-                        if (newBounds && this.isPointInBounds(pos, newBounds)) {
-                            this.initTransform();
-                            this.isMoving = true;
-                            this.setPanelsInteractive(false);
-                            this.displayCanvas.setPointerCapture(e.pointerId);
-                            this.transformDrag = {
-                                type: 'move',
-                                startX: pos.x,
-                                startY: pos.y,
-                                startTransform: { ...this.transform },
-                            };
-                        }
-                    }
+                    // Clicked outside handles — do nothing, keep transform active
+                    // User must double-click to commit the transform
                     return;
                 }
             }
