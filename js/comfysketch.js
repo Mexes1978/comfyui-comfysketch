@@ -1258,7 +1258,7 @@ class ToolbarPanel extends DraggablePanel {
     createContent() {
         this.addSection('Select');
         const selectGrid = document.createElement('div');
-        selectGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 22px); gap: 3px; margin-bottom: 6px;';
+        selectGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 24px); gap: 3px; margin-bottom: 6px;';
         
         // Single select button — shows icon of current select sub-tool, default lasso
         this.pad.selectSubTool = this.pad.selectSubTool || 'select-lasso';
@@ -1278,11 +1278,18 @@ class ToolbarPanel extends DraggablePanel {
             this.showSelectSubMenu(this.selectBtn);
         };
         selectGrid.appendChild(this.selectBtn);
+        
+        // Move tool in select section
+        const moveBtn = this.createBtn(ICONS.move, 'Move (V) (double-click for options)', this.pad.tool === 'move');
+        moveBtn.dataset.tool = 'move';
+        moveBtn.onclick = () => { if (this.pad.transform) this.pad.commitTransform(); this.pad.tool = 'move'; this.updateToolButtons(); this.pad.updateCursor(); };
+        moveBtn.ondblclick = (e) => { e.stopPropagation(); this.showToolProperties('move', moveBtn); };
+        selectGrid.appendChild(moveBtn);
+        
         this.content.appendChild(selectGrid);
         
         this.addSection('Draw');
         const tools = [
-            { id: 'move', icon: ICONS.move, label: 'Move (V)' },
             { id: 'draw', icon: ICONS.brush, label: 'Brush (B)' },
             { id: 'pencil', icon: ICONS.pencil, label: 'Pencil (P)' },
             { id: 'line', icon: ICONS.line, label: 'Line (L)' },
@@ -1292,7 +1299,7 @@ class ToolbarPanel extends DraggablePanel {
             { id: 'erase', icon: ICONS.eraser, label: 'Erase (E)' },
         ];
         const toolsGrid = document.createElement('div');
-        toolsGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 22px); gap: 3px; margin-bottom: 6px;';
+        toolsGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 24px); gap: 3px; margin-bottom: 6px;';
         tools.forEach(t => {
             const btn = this.createBtn(t.icon, t.label + ' (double-click for options)', t.id === this.pad.tool);
             btn.dataset.tool = t.id;
@@ -1310,7 +1317,7 @@ class ToolbarPanel extends DraggablePanel {
             { id: 'spray', icon: ICONS.sprayBrush, label: 'Spray' },
         ];
         const brushGrid = document.createElement('div');
-        brushGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 22px); gap: 3px;';
+        brushGrid.style.cssText = 'display: grid; grid-template-columns: repeat(2, 24px); gap: 3px;';
         brushTypes.forEach(t => {
             const btn = this.createBtn(t.icon, t.label + ' (double-click for options)', t.id === this.pad.brushType);
             btn.dataset.brushtype = t.id;
