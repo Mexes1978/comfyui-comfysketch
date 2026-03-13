@@ -5,8 +5,8 @@ A drawing and sketching node for ComfyUI with layers, multiple brush types, and 
 ## ❤️ Support this project
 
 If you find this project useful, you can support its development here:  
-👉https://mexesmith.gumroad.com/l/kzwqlr
-
+[👉https://mexesmith.gumroad.com/
+]
  **Status:** Active development. Feedback and issues are welcome.
 
 > Parts of this project were developed with the help of AI-assisted tools and then refined manually.
